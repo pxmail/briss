@@ -72,7 +72,7 @@ class login extends Action {
     }
 
     public function getPrivilege() {
-        return 30
+        return 30;
     }
     
 }
