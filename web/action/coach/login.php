@@ -48,7 +48,7 @@ class login extends Action {
 		 $obj->privileges = explode(',', $role->privilege);
 		 
 		 $access_token = JWT::encode($obj);
-		 Log::debug($access_token);
+         namespace\Log::debug($access_token);
 		 $expire_in = JWT::EXPIRE;
 		 return ['access_token' => $access_token, 'expire_in' => $expire_in];
 	}
