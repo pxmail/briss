@@ -27,7 +27,7 @@ class login extends Action {
 		 if (empty($result)) {
 		 	return 2000;
 		 }
-		 debug($result);
+
 		 if ($coach->status === coach::BLOCKED) {
 		 	return 2001;
 		 }
