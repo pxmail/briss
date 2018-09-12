@@ -40,7 +40,7 @@ class login extends Action {
 		 
 		 $role = new role();
 		 $role->get($coach->role_id);
-		 error_log($role);
+		 var_dump($role);
 		 $obj = new stdClass();
 		 $obj->uid = $coach->id;
 		 $obj->name = $coach->name;
