@@ -16,7 +16,7 @@ require 'fly/model.php';
 require 'fly/jwt.php';
 
 // 调试日志
-//namespace\Log::debug($_REQUEST);
+namespace\Log::debug($_REQUEST);
 namespace\route::go();
 
 class route {
