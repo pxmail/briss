@@ -50,7 +50,7 @@ class login extends Action {
 		 $access_token = JWT::encode($obj);
 		 
 		 $expire_in = JWT::EXPIRE;
-		 
+		 error_log($expire_in);
 		 return ['access_token' => $access_token, 'expire_in' => $expire_in];
 	}
 
