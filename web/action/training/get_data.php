@@ -30,6 +30,6 @@ class get_data extends Action {
 	}
 
 	public function getPrivilege() {
-		return 0;
+		return NULL;
 	}
 }
