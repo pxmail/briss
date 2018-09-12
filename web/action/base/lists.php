@@ -16,6 +16,6 @@ class lists extends Action {
 	}
 	
 	public function getPrivilege() {
-		
+		return NULL;
 	}
 }
