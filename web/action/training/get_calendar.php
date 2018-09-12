@@ -35,6 +35,6 @@ class get_calendar extends Action {
 	}
 
 	public function getPrivilege() {
-		return 0;
+		return NULl;
 	}
 }
