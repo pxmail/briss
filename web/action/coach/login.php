@@ -27,6 +27,7 @@ class login extends Action {
 		 if (empty($result)) {
 		 	return 2000;
 		 }
+		 debug($result);
 		 if ($coach->status === coach::BLOCKED) {
 		 	return 2001;
 		 }
@@ -48,7 +49,7 @@ class login extends Action {
 		 $obj->privileges = explode(',', $role->privilege);
 		 
 		 $access_token = JWT::encode($obj);
-         debug($access_token);
+
 		 $expire_in = JWT::EXPIRE;
 		 return ['access_token' => $access_token, 'expire_in' => $expire_in];
 	}
