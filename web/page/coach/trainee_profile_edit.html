@@ -1,0 +1,95 @@
+<ion-view class="subpage trainee-profile-pge">
+    <div class="bar bar-header">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="showSimple !== true"></button>
+        <h1 class="title">修改运动员资料</h1>
+    </div>
+    <ion-content class="has-header gray-bg" padding="true">
+        <form action="#" method="post" onsubmit="return false;">
+            <div class="center-text">
+                <img data-ng-src="{{form.avatar|| defaultAvatar}}" class="profile-avatar" width="120" height="120" data-ng-click="getUploadToken()" onclick="$('#avatar').click()">
+            	<progress id="trainee_avatar_progress" max="100" value="0" style="width: 100%;"></progress>
+            </div>
+            <div class="list register-form">
+
+                <div style="display: none">
+                    <input id="avatar" type="file" accept="image/*"
+                           onchange="angular.element(this).scope().uploadAvatar()" />
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">姓名</span>
+                    <input type="text" data-ng-model="form.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">手机号</span>
+                    <input type="tel" required="required" data-ng-model="form.mobile">
+                </label>
+
+                <div class="item item-divider"></div>
+
+                <label class="item item-input item-select">
+                    <span class="input-label">性别</span>
+                    <select data-ng-model="form.gender" required="required">
+                        <option value="" data-ng-selected="true" data-ng-disabled="true">必选</option>
+                        <option value="{{gender.name}}" data-ng-repeat="gender in genders">{{gender.value}}</option>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">出生日期</span>
+                    <input type="date" data-ng-model="form.dob_front">
+                </label>
+                <label class="item item-input item-input-with-suffix">
+                    <span class="input-label">身高</span>
+                    <input type="number" required="required" pattern="\d+" data-ng-model="form.height"><span class="input-suffix">cm</span>
+                </label>
+                <label class="item item-input item-input-with-suffix">
+                    <span class="input-label">体重</span>
+                    <input type="number" required="required" pattern="\d+" data-ng-model="form.weight"><span class="input-suffix">kg</span>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">籍贯</span>
+                    <input type="text" required="required" data-ng-model="form.native">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">民族</span>
+                    <input type="text" data-ng-model="form.nationality">
+                </label>
+
+                <div class="item item-divider"></div>
+
+                <label class="item item-input item-select">
+                    <span class="input-label">训练基地</span>
+                    <select data-ng-model="form.base_name" required="required">
+                        <option value="" data-ng-selected="true" data-ng-disabled="true">必选</option>
+                        <option value="{{base.name}}" data-ng-repeat="base in bases">{{base.name}}</option>
+                    </select>
+                </label>
+                <a class="item item-icon-right" data-ui-sref="^.sports_event">
+                    <span>运动项目</span>
+                    <span style="float: right;">{{form.sport}}</span>
+                    <label data-ng-hide="true">{{form.sport_id}}</label>
+                    <span style="float: right;" data-ng-if="!form.sport">请选择</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <label class="item item-input">
+                    <span class="input-label">运动队</span>
+                    <input type="text" data-ng-model="form.team">
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">运动等级</span>
+                    <select data-ng-model="form.grade" required="required">
+                        <option value="" data-ng-selected="true" data-ng-disabled="true">必选</option>
+                        <option value="{{grade}}" data-ng-repeat="grade in grades">{{grade}}</option>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">进入专业队时间</span>
+                    <input type="date" data-ng-model="form.dot_front">
+                </label>
+            </div>
+            
+            <button class="button button-block button-clear button-positive" type="submit" data-ng-disabled="saving" data-ng-click="save()">保存修改</button>
+
+        </form>
+    </ion-content>
+
+</ion-view>

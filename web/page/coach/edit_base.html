@@ -1,0 +1,39 @@
+<ion-view class="subpage">
+    <div class="bar bar-header register-header">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="isEdit"></button>
+        <h1 class="title" data-ng-if="!isEdit">添加训练基地</h1>
+        <h1 class="title" data-ng-if="isEdit">修改训练基地</h1>
+    </div>
+    <!-- 基地信息 -->
+    <ion-content class="gray-bg has-header" padding="true">
+        <form action="#" method="post" onsubmit="return false;" data-ng-submit="save()">
+            <div class="page-note">
+                <span data-ng-if="isEdit">
+                    修改基地名称
+                </span>
+                <span data-ng-if="!isEdit">
+                    填写基地名称
+                </span>
+            </div>
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">基地名称</span>
+                    <input type="text" required="required" data-ng-model="base.name">
+                </label>
+            </div>
+
+            <div class="center-text" data-ng-if="isEdit === false">
+                <button class="button button-clear button-positive" type="submit">添加</button>
+            </div>
+
+            <div class="center-text" data-ng-if="isEdit">
+                <button class="button button-clear button-positive" type="submit">保存修改</button>
+            </div>
+
+            <div class="center-text" data-ng-if="isEdit && base.trainee_num === '0'">
+                <button class="button button-clear button-assertive" data-ng-click="deleteBase($event)">删除基地</button>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>

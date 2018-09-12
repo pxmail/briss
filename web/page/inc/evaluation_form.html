@@ -1,0 +1,96 @@
+<ul class="evaluation-form before">
+    <li data-ng-if="form.create_date" class="evaluation-time">
+        训练时间：{{form.create_date}}
+    </li>
+    <li>
+        <label>自我状态评价</label>
+        <div data-ez-star data-val="form.self_rating" data-readonly="readonly || endTrain" data-title="true"></div>
+    </li>
+    <li>
+        <label>训练欲望</label>
+        <div data-ez-star data-val="form.desire" data-readonly="readonly || endTrain"></div>
+    </li>
+    <li>
+        <label>睡眠质量</label>
+        <div data-ez-star data-val="form.sleep" data-readonly="readonly || endTrain"></div>
+    </li>
+    <li>
+        <label>食欲</label>
+        <div data-ez-star data-val="form.appetite" data-readonly="readonly || endTrain"></div>
+    </li>
+    <li>
+        <label>Omegawave测试</label>
+        <div data-ez-star data-val="form.omega_wave" data-readonly="readonly"></div>
+    </li>
+
+    <li>
+        <label>晨脉</label>
+        <div><input type="number" min="40" max="110" data-ng-readonly="readonly" data-ng-model="form.morning_pulse" placeholder="可不填写"></div>
+    </li>
+    <li>
+        <label>训练前RPE</label>
+        <div>
+            <ez-number begin="6" end="20" val="form.rpe_before" class="rpe-numbers" data-readonly="readonly"></ez-number>
+        </div>
+    </li>
+    <li>
+        <label>训练前HRV</label>
+        <div><input type="number" pattern="\d*" placeholder="可不填写" data-ng-model="form.hrv_before" data-ng-readonly="readonly"></div>
+    </li>
+    <!-- 疼痛部位等级 ngRepeat 循环，用一个 empty 过滤器来控制是否在 readonly 下显示内容，详情参见 empty filter -->
+    <li data-ng-repeat-start="row in form.pain| empty : readonly as pains track by $index" data-ng-if="!endTrain">
+        <label>疼痛部位</label>
+        <div><input type="text" data-ng-model="row.part" placeholder="可不填写"></div>
+        <div class="inline-button">
+            <i data-on-release="addPain()" class="ion-plus-circled"></i>
+            <i data-on-release="removePain($index)" class="ion-minus-circled"></i>
+        </div>
+    </li>
+    <li data-ng-repeat-end data-ng-if="!endTrain">
+        <label>疼痛等级</label>
+        <div>
+            <ez-number begin="1" end="10" val="row.grade" class="pain-values" data-readonly="readonly"></ez-number>
+        </div>
+    </li>
+    <!-- 疼痛部位等级：readonly 显示 -->
+    <li data-ng-if="readonly || endTrain">
+        <label>疼痛部位</label>
+        <div>
+            <span data-ng-repeat="row in form.pain" class="pain-capsule">{{row.part}}［{{row.grade}}级］</span>
+            <span data-ng-if="!form.pain || form.pain.length === 0">（无）</span>
+        </div>
+    </li>
+    <!-- 疼痛部位等级：结束 -->
+
+</ul>
+
+<ul class="evaluation-form after" data-ng-if=" fullMode || endTrain">
+    <li>
+        <label>训练后RPE</label>
+        <div>
+            <ez-number begin="6" end="20" val="form.rpe_after" class="rpe-numbers" data-readonly="readonly"></ez-number>
+        </div>
+    </li>
+    <li>
+        <label>训练后HRV</label>
+        <div><input type="number" pattern="\d*" placeholder="可不填写" data-ng-model="form.hrv_after" data-ng-readonly="readonly"></div>
+    </li>
+    <li>
+        <label>冷疗后HRV</label>
+        <div><input type="number" pattern="\d*" placeholder="可不填写" data-ng-model="form.hrv_cold" data-ng-readonly="readonly"></div>
+    </li>
+    <li data-ng-if="readonly || isCoach">
+        <label>训练态度</label>
+        <div data-ez-star data-val="form.attitude" data-readonly="readonly"></div>
+    </li>
+    <li data-ng-if="readonly || isCoach">
+        <label>完成质量</label>
+        <div data-ez-star data-val="form.quality" data-readonly="readonly"></div>
+    </li>
+    <li data-ng-if="readonly || isCoach">
+        <label>训练评价</label>
+        <div>
+            <textarea placeholder="简要点评此次训练" data-ng-model="form.comment" data-ng-readonly="readonly"></textarea>
+        </div>
+    </li>
+</ul>

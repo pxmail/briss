@@ -1,0 +1,40 @@
+<ion-view class="subpage">
+    <div class="bar bar-header data-tab-header">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()"></button>
+        <ul class="row">
+            <li data-ng-class="{ active : tab === 'data' }" data-ng-click="setTab('data')">数据</li>
+            <li data-ng-class="{ active : tab === 'evaluation' }" data-ng-click="setTab('evaluation')">状态</li>
+        </ul>
+        <div style="padding: 8px;">
+            <a class="button button-dark" target="_blank" data-ng-href="api/excel/day_export?{{post_params}}"><i class="icon ion-archive"></i>导出Excel</a>
+        </div>
+    </div>
+    <ion-content class="gray-bg has-header">
+        <!-- 数据 -->
+        <div class="trainee-data" data-ng-show="tab === 'data'">
+            <h2 data-ng-repeat-start="row in trainings">{{row.training_time.substring(0, 5)}}</h2>
+            <div data-ng-repeat-end class="row training-data-row">
+                <div class="training-data flex" data-on-hold="showHistory(row)">
+                    <h3>{{row.movement_name}}</h3>
+                    <div data-ez-data="row"></div>
+                </div>
+            </div>
+            <h2>&nbsp;</h2>
+            <div class="training-data-dump">
+                <div data-ng-if="trainings && trainings.length > 0">&nbsp;</div>
+                <div data-ng-if="!trainings">正在加载数据……</div>
+                <div data-ng-if="trainings && trainings.length === 0">无训练数据</div>
+            </div>
+
+        </div>
+
+        <!-- 评估表 -->
+        <div data-ng-show="tab === 'evaluation'" class="padding">
+            <div class="evaluation-pane" data-ez-evaluation="evalForm" data-readonly=" true " data-full-mode=" true "></div>
+            <div class="evaluation-radar">
+                <div data-ez-radar="evalForm"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

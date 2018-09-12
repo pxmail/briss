@@ -1,0 +1,346 @@
+{
+    "攀爬机训练": [
+        {
+            "id": 101,
+            "name": "5x30s 高强度间歇性训练",
+            "format": {
+                "number_1": {
+                    "title": "第一次",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_2": {
+                    "title": "第二次",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_3": {
+                    "title": "第三次",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_4": {
+                    "title": "第四次",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_5": {
+                    "title": "第五次",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_6": {
+                    "title": "总高度",
+                    "filter": "int",
+                    "unit": "英尺"
+                }
+            }
+        },
+        {
+            "id": 102,
+            "name": "Tabata 高强度间歇性训练",
+            "format": {
+                "number_1": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_2": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_3": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_4": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_5": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_6": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_7": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_8": {
+                    "title": "距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                }
+                
+            }
+        },
+        {
+            "id": 103,
+            "name": "10s 冲刺训练",
+            "format": {
+                "group_id": {
+                    "title": "组编号 第",
+                    "unit": "组",
+                    "filter": "int"
+                },
+                "number_1": {
+                    "title": "开始冲刺距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_2": {
+                    "title": "结束冲刺距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_3": {
+                    "title": "冲刺距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                },
+                "number_4": {
+                    "title": "总距离",
+                    "filter": "int",
+                    "unit": "英尺"
+                }
+            }
+        },
+        {
+            "id": 104,
+            "name": "耐力训练",
+            "format": {
+                "number_1": {
+                    "title": "攀爬时间",
+                    "unit": "分钟",
+                    "filter": "int"
+                },
+                "number_2": {
+                    "title": "距离",
+                    "unit": "英尺",
+                    "filter": "int"
+                },
+                "number_3": {
+                    "title": "总距离",
+                    "unit": "英尺",
+                    "filter": "int"
+                    
+                },
+                "number_4": {
+                    "title": "阻力",
+                    "filter": "resistance"
+                }
+
+            }
+        }
+    ],
+    "Pully训练": [
+        {
+            "id": 201,
+            "name": "转体提拉",
+            "format": {
+                "number_1": {
+                    "title": "功率",
+                    "filter": "int",
+                    "unit": "瓦"
+                }
+            }
+        }
+    ],
+    "力量耐力训练": [
+        {
+            "id": 301,
+            "name": "三分钟俯卧撑",
+            "format": {
+                "number_1": {
+                    "title": "次数",
+                    "filter": "int",
+                    "unit": "次"
+                },
+                "number_2": {
+                    "title": "负重",
+                    "filter": "float",
+                    "unit": "kg",
+                    "allowEmpty": true
+                }
+            }
+        },
+        {
+            "id": 302,
+            "name": "三分钟引体向上",
+            "format": {
+                "number_1": {
+                    "title": "次数",
+                    "filter": "int",
+                    "unit": "次"
+                },
+                "number_2": {
+                    "title": "负重",
+                    "filter": "float",
+                    "unit": "kg",
+                    "allowEmpty": true
+                }
+            }
+        },
+        {
+            "id": 303,
+            "name": "俯卧撑最大次数",
+            "format": {
+                "number_1": {
+                    "title": "次数",
+                    "filter": "int",
+                    "unit": "次"
+                },
+                "number_2": {
+                    "title": "负重",
+                    "filter": "float",
+                    "unit": "kg",
+                    "allowEmpty": true
+                }
+            }
+        },
+        {
+            "id": 304,
+            "name": "引体向上最大次数",
+            "format": {
+                "number_1": {
+                    "title": "次数",
+                    "filter": "int",
+                    "unit": "次"
+                },
+                "number_2": {
+                    "title": "负重",
+                    "filter": "float",
+                    "unit": "kg",
+                    "allowEmpty": true
+                }
+            }
+        }
+    ],
+    "动作速度训练": [
+        {
+            "id": 401,
+            "name": "六边形跳",
+            "format": {
+                "group_id": {
+                    "title": "组编号 第",
+                    "unit": "组",
+                    "filter": "int"
+                },
+                "number_1": {
+                    "title": "圈数",
+                    "unit": "圈",
+                    "filter": "int"
+                },
+                "number_2": {
+                    "title": "双脚跳用时",
+                    "filter": "float",
+                    "unit": "秒",
+                    "allowEmpty": true
+                },
+                "number_3": {
+                    "title": "左脚跳用时",
+                    "filter": "float",
+                    "unit": "秒",
+                    "allowEmpty": true
+                },
+                "number_4": {
+                    "title": "右脚跳用时",
+                    "filter": "float",
+                    "unit": "秒",
+                    "allowEmpty": true
+                }
+            }
+        },
+        {
+            "id": 402,
+            "name": "20次双摇",
+            "format": {
+                "group_id": {
+                    "title": "组编号 第",
+                    "unit": "组",
+                    "filter": "int"
+                },
+                "number_1": {
+                    "title": "时间",
+                    "unit": "秒",
+                    "filter": "float"
+                },
+                "number_2": {
+                    "title": "间断次数",
+                    "unit": "次",
+                    "filter": "int",
+                    "allowEmpty": true
+                }
+            }
+        },
+        {
+            "id": 403,
+            "name": "10秒快速脚步",
+            "format": {
+                "group_id": {
+                    "title": "组编号 第",
+                    "unit": "组",
+                    "filter": "int"
+                },
+                "number_1": {
+                    "title": "次数",
+                    "unit": "次",
+                    "filter": "int"
+                }
+            }
+        },
+        {
+            "id": 404,
+            "name": "1分钟单摇",
+            "format": {
+                "group_id": {
+                    "title": "组编号 第",
+                    "unit": "组",
+                    "filter": "int"
+                },
+                "number_1": {
+                    "title": "次数",
+                    "unit": "次",
+                    "filter": "int"
+                },
+                "number_2": {
+                    "title": "间断次数",
+                    "unit": "次",
+                    "filter": "int",
+                    "allowEmpty": true
+                }
+            }
+        },
+        {
+            "id": 405,
+            "name": "1分钟双摇",
+            "format": {
+                "group_id": {
+                    "title": "组编号 第",
+                    "unit": "组",
+                    "filter": "int"
+                },
+                "number_1": {
+                    "title": "次数",
+                    "unit": "次",
+                    "filter": "int"
+                },
+                "number_2": {
+                    "title": "间断次数",
+                    "unit": "次",
+                    "filter": "int",
+                    "allowEmpty": true
+                }
+            }
+        }
+    ]
+}

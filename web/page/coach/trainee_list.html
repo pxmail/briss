@@ -1,0 +1,48 @@
+<ion-view class="subpage settings-trainees-page">
+    <div class="bar bar-header subpage-header">
+        <h1 class="title">运动员列表</h1>
+    </div>
+    <ion-content class="has-header gray-bg" padding="true">
+        <div class="block-title" data-ng-if="pendingTrainees && pendingTrainees.length > 0">等待审核运动员</div>
+        <div class="list trainee-list pending-trainee-list" data-ng-if="pendingTrainees && pendingTrainees.length > 0">
+            <a class="item item-avatar" data-ui-sref="^.edit_trainee({trainee_id: t.id})" data-ng-repeat="t in pendingTrainees">
+                <img data-ng-src="{{t.avatar|| defaultAvatar}}" alt="{{t.name}}">
+                <h2>{{t.name}}</h2>
+                <p><span class="team">{{t.sport}}</span></p>
+                <div data-ng-if="t.status === '0'" class="buttons">
+                    <div class="positive" data-ng-click="traineeAudit($event, t, '1')">通过</div>
+                    <div class="assertive" data-ng-click="traineeAudit($event, t, '4')">拒绝</div>
+                </div>
+                <div data-ng-if="t.status === '4'" class="day">未通过审核</div>
+            </a>
+        </div>
+
+        <div class="row no-padding">
+            <div class="block-title flex">
+                我管理的运动员
+            </div>
+            <a class="button button-clear button-positive" data-ui-sref="^.trainee_select">自定义运动员列表</a>
+        </div>
+        <div data-ng-if="!trainees">正在加载……</div>
+        <div class="list trainee-list" data-ng-if="trainees">
+            <a class="item item-avatar" data-ui-sref="^.edit_trainee({trainee_id: t.id})" data-ng-repeat="t in trainees" data-on-hold="showAction(t, $index)">
+                <img data-ng-src="{{t.avatar|| defaultAvatar}}" alt="{{t.name}}">
+                <h2>{{t.name}}</h2>
+                <p><span class="team">{{t.sport}}</span></p>
+                <div class="day">已训练 {{t.day}} 天</div>
+            </a>
+        </div>
+        <div class="block-title">打开“仅显示我的运动员”选项后，首页、运动员搜索页面将只显示以上自定义列表中的运动员</div>
+        <div class="list">
+            <div class="item item-toggle">
+                仅显示我的运动员
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" data-ng-model="settings.myTraineeOnly" data-ng-change="setMyTraineeOnlyFlag()">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

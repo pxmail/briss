@@ -1,0 +1,227 @@
+2018/09/10 18:55:48 [error] 23504#0: *436268 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/touch/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index.html"
+2018/09/10 18:55:50 [error] 23504#0: *436277 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/touch/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index.html"
+2018/09/10 18:55:52 [error] 23504#0: *436283 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/touch/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index.html"
+2018/09/10 18:55:55 [error] 23504#0: *436289 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/touch/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index.html"
+2018/09/10 19:16:26 [error] 23504#0: *436303 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/touch/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index.html"
+2018/09/10 19:23:50 [error] 23504#0: *436493 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:19 [error] 23507#0: *436495 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:31 [error] 23507#0: *436497 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:32 [error] 23507#0: *436499 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:32 [error] 23507#0: *436501 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:32 [error] 23507#0: *436503 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:32 [error] 23507#0: *436505 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:32 [error] 23507#0: *436507 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:33 [error] 23507#0: *436509 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:34 [error] 23507#0: *436511 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:34 [error] 23507#0: *436513 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:34 [error] 23507#0: *436515 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:34 [error] 23507#0: *436517 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:34 [error] 23507#0: *436519 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:34 [error] 23507#0: *436521 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:35 [error] 23507#0: *436523 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:35 [error] 23507#0: *436525 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:35 [error] 23507#0: *436527 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:24:40 [error] 23507#0: *436529 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/10 19:25:16 [error] 23507#0: *436531 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/sites/briss/web/fly/model.php:25
+Stack trace:
+#0 /var/sites/briss/web/fly/model.php(25): PDO->__construct('mysql:host=123....', 'root', 'ezs2016', Array)
+#1 /var/sites/briss/web/fly/model.php(13): fly\Model::initPDO()
+#2 /var/sites/briss/web/action/coach/login.php(25): fly\Model->__construct()
+#3 /var/sites/briss/web/route.php(82): login->exec(Array)
+#4 /var/sites/briss/web/route.php(45): fly\route::main()
+#5 /var/sites/briss/web/route.php(20): fly\route::go()
+#6 {main}
+  thrown in /var/sites/briss/web/fly/model.php on line 25" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "POST /api/coach/login HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/11 08:42:29 [error] 23507#0: *436841 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "GET /api/coach/gen_touch_code HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/11 08:42:38 [error] 23507#0: *436843 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "GET /api/coach/gen_touch_code HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/11 08:42:57 [error] 23507#0: *436845 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "GET /api/coach/gen_touch_code HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"
+2018/09/11 08:44:39 [error] 23507#0: *436850 FastCGI sent in stderr: "PHP message: PHP Warning:  fopen(../log/php_error.log): failed to open stream: Permission denied in /var/sites/briss/web/fly/log.php on line 24
+PHP message: PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 36
+PHP message: PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /var/sites/briss/web/fly/log.php on line 37" while reading response header from upstream, client: 60.247.21.202, server: man-coach.ezsport.com.cn, request: "GET /api/coach/gen_touch_code HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.0-fpm.sock:", host: "man-coach.ezsport.com.cn", referrer: "https://man-coach.ezsport.com.cn/index-coach.html"

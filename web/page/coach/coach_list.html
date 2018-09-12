@@ -1,0 +1,20 @@
+<ion-view class="subpage coach-list-page">
+    <div class="bar bar-header">
+        <h1 class="title">教练员列表</h1>
+    </div>
+
+    <!-- 教练员信息 --> 
+    <ion-content class="has-header gray-bg" padding="true">
+        <div class="list coach-list">
+            <a data-ng-if="c.id !== my_uid" data-ui-sref="^.coach_profile({coach_id: c.id})"
+               data-ng-repeat="c in coaches" class="item item-icon-right">
+                {{c.name}} <span class="item-note"> {{c.role_id| role}} </span>
+                <i class="icon ion-ios-arrow-right" data-ng-if="c.id !== my_uid"></i>
+            </a>
+            <div data-ng-if="c.id === my_uid"
+               data-ng-repeat="c in coaches" class="item item-icon-right">
+                {{c.name}} （我自己） <span class="item-note"> {{c.role_id| role}} </span>
+            </div>
+        </div>
+    </ion-content> 
+</ion-view>

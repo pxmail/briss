@@ -1,0 +1,18 @@
+<ion-view>
+    <ion-nav-title>
+        <span data-ng-if="!isEndTrain">
+            填写训练前评估
+        </span>
+        <span data-ng-if="isEndTrain">
+            填写训练后数据
+        </span>
+    </ion-nav-title>
+    <ion-content class="gray-bg">
+        <div class="padding note">OmegaWave可训练后再填写/修改，晨脉、疼痛若无可不填写</div>
+        <div data-ez-evaluation="form" class="trainee-evaluation" data-end-train="isEndTrain"></div>
+        <button class="button button-block button-clear button-positive" data-on-release="save()">
+            <span data-ng-if="!isEndTrain">开始训练</span>
+            <span data-ng-if="isEndTrain">结束训练</span>
+        </button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "qiniu/php-sdk": "^7.0",
+        "phpoffice/phpexcel": "^1.8",
+        "tecnickcom/tcpdf": "^6.2"
+    }
+}

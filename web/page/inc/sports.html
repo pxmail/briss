@@ -1,0 +1,14 @@
+<ion-view class="subpage">
+    <div class="bar bar-header register-header">
+    	<button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="showSimple !== true"></button>
+        <h1 class="title">运动项目列表</h1>
+    </div>
+    <!-- 运动项目信息 -->
+    <ion-content class="gray-bg has-header" padding="true">
+        <div class="list">
+            <a ng-repeat="sport in sports" class="item item-icon-right" data-ng-click="selectItem(sport)">
+                {{sport.name}}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

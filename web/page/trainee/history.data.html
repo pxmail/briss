@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-nav-title>
+        {{date}} 训练数据
+    </ion-nav-title>
+    <ion-content class="gray-bg has-subheader">
+        <div class="center-text prompt" data-ng-if="!trainings">正在加载数据……</div>
+        <div class="trainee-data">
+            <h2 data-ng-repeat-start="row in trainings">{{row.training_time.substring(0, 5)}}</h2>
+            <div data-ng-repeat-end class="row training-data-row" data-ng-class="{'more' : row.details}">
+                <div class="training-data flex">
+                    <h3>{{row.movement_name}}</h3>
+                    <div data-ez-data="row"></div>
+                </div>
+                <button class="training-data-button" data-ng-click="toggleDetails(row)">
+                    <i class="ion-icon" data-ng-class="{'ion-chevron-down' : !row.details, 'ion-chevron-up' : row.details}"></i>
+                </button>
+            </div>
+            <h2 data-ng-if="trainings.length > 0">&nbsp;</h2>
+            <div class="training-data-dump" data-ng-if="trainings.length > 0">
+                <div>&nbsp;</div>
+            </div>
+      </div>
+    </ion-content>
+</ion-view>

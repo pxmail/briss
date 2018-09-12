@@ -1,0 +1,44 @@
+<ion-view>
+    <header class="header-with-left-button">
+        <div class="left-button" data-on-tap="goHome()">
+            <i class="icon ion-ios-home"></i>
+        </div>
+        <div class="header-content">
+            <input  id="search"
+                    type="search" 
+                    class="header-search" 
+                    placeholder="搜索姓名、电话、专业队" 
+                    autocomplete="off" 
+                    data-ng-model="keyword"
+                    ng-model-options='{debounce: 500}'
+                    data-ng-change="query()">
+        </div>
+    </header>
+
+    <ion-content id="home" class="has-header gray-bg with-logo" padding="true">
+        <div class="trainee-list">
+            <a class="trainee {{trainee.train_status}}" data-ng-repeat="trainee in trainees" data-ng-click="decide(trainee)">
+                <div class="trainee-container">
+                    <div class="avatar" data-ng-click="getHistory($event, trainee.id)">
+                        <i class="icon ion-person" data-ng-if="trainee.avatar === ''"></i>
+                        <img data-ng-src="{{trainee.avatar}}-thumb200" alt="{{trainee.name}}" data-ng-if="trainee.avatar !== ''">
+                    </div>
+                    <div class="info">
+                        <div class="name">{{trainee.name}}
+                            <span class="status {{trainee.train_status}}">{{trainee| traineeStatus}}</span>
+                        </div>
+                        <div class="sport"><span class="label-light">项目：</span>{{trainee.sport}}</div>
+                        <!--<div class="base"><span class="label-light">基地：</span>{{trainee.base_name}}</div>-->
+                        <div class="last-train-date"><span class="label-light">最近一次训练：</span>{{trainee.last_train_date === '0000-00-00' ? '（无记录）' : trainee.last_train_date}}</div>
+                        <div class="trainee-button">
+                            <button data-ng-if="trainee.train_status === 'not-in'">开始训练</button>
+                            <button data-ng-if="trainee.train_status === 'in'">查看状态</button>
+                            <button data-ng-if="trainee.train_status === 'finished'">查看数据</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </ion-content>
+
+</ion-view>

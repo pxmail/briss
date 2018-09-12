@@ -1,0 +1,12 @@
+<ion-view class="subpage settings-trainees-page">
+    <div class="bar bar-header subpage-header">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()"></button>
+        <h1 class="title">自定义运动员列表</h1>
+    </div>
+    <ion-content class="has-header gray-bg" padding="true">
+        <div class="item item-divider" data-ng-repeat-start="group in trainees" >{{group.sport}}</div>
+        <div data-ng-repeat-end="">
+            <ion-checkbox data-ng-repeat="trainee in group.trainees" data-ng-model="trainee.is_mine" data-ng-change="toggleMyTrainee(trainee)">{{trainee.name}}</ion-checkbox>
+        </div>
+    </ion-content>
+</ion-view>

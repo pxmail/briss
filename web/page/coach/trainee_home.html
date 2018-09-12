@@ -1,0 +1,56 @@
+<ion-view class="subpage">
+    <div class="bar bar-header data-tab-header">
+        <ul class="row">
+            <li data-ng-class="{ active : tab === 'data' }" data-ng-click="setTab('data')">数据</li>
+            <li data-ng-class="{ active : tab === 'evaluation' }" data-ng-click="setTab('evaluation')">状态</li>
+        </ul>
+    </div>
+    <ion-content class="gray-bg has-header">
+        <!-- 数据 -->
+        <div class="trainee-data" data-ng-show="tab === 'data'">
+            <h2 data-ng-repeat-start="row in trainings">{{row.training_time.substring(0, 5)}}</h2>
+            <div data-ng-repeat-end class="row training-data-row">
+                <div class="training-data flex" data-on-hold="showHistory(row)">
+                    <h3>{{row.movement_name}}</h3>
+                    <div data-ez-data="row"></div>
+                </div>
+                <button class="training-data-button" data-on-tap="showEditForm(row)"><i class="ion-icon ion-edit"></i></button>
+
+            </div>
+            <!-- 只有在父控制器 coachTrainee 设置了 trainee 的状态为"入场"后，才显示 -->
+            <h2 data-ez-current-time=" 'HH:mm' " data-ng-if="trainee.state">&nbsp;</h2>
+            <div class="new-data-button-container" data-ng-if="trainee.state">
+                <button class="new-data-button" data-ng-click="showMovementsForm()"><span data-ng-if="trainee.state === 'OUT'">补充</span>录入数据</button>
+            </div>
+
+            <h2 data-ng-if="trainee.state === false" data-ez-current-time=" 'HH:mm' ">&nbsp;</h2>
+            <div data-ng-if="trainee.state === false" class="training-data-dump">
+                <button class="new-data-button" data-ng-click="setTab('evaluation', true)">填表并开始训练</button>
+            </div>
+        </div>
+
+        <!-- 评估表 -->
+        <div data-ng-show="tab === 'evaluation'" class="padding">
+
+            <div class="evaluation-pane" data-ez-evaluation="evalForm" data-readonly=" !evalForm.editable " data-end-train=" trainee.state !== false "></div>
+            <div data-ng-if="!isHistory">
+                <button class="button button-block end-train-button" data-ng-click="saveBeginTrain()" data-ng-if=" trainee.state === false">
+                    开始训练
+                </button>
+                <button class="button button-block end-train-button" data-ng-click="setEndTrain()" data-ng-if=" trainee.state === 'IN' && !evalForm.editable">
+                    填写结束训练评估
+                </button>
+                <button class="button button-block end-train-button" data-ng-click="saveEndTrain()" data-ng-if=" trainee.state === 'IN' && evalForm.editable">
+                    结束训练
+                </button>
+                <button class="button button-block end-train-button" data-ng-click="setEndTrain()" data-ng-if=" trainee.state === 'OUT' && !evalForm.editable">
+                    修改评估内容
+                </button>
+                <button class="button button-block end-train-button" data-ng-click="saveEndTrain()" data-ng-if=" trainee.state === 'OUT' && evalForm.editable">
+                    保存修改
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

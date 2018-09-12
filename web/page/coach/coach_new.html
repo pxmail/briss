@@ -1,0 +1,31 @@
+<ion-view class="subpage">
+    <div class="bar bar-header">
+        <h1 class="title">注册教练员</h1>
+    </div>
+    <ion-content class="has-header gray-bg" padding="true">
+        <form action="#" method="post" onsubmit="return false;" data-ng-submit="create()">
+            <div class="list register-form">
+                <label class="item item-input">
+                    <span class="input-label">姓名</span>
+                    <input type="text" required="required" data-ng-model="form.name" placeholder="必填">
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">角色</span>
+                    <select data-ng-model="form.role_id" required="required">
+                        <option value="" data-ng-selected="true" data-ng-disabled="true">必选</option>
+                        <option value="2">超级教练员</option>
+                        <option value="3">普通教练员</option>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">密码</span>
+                    <input type="text" required="required" minlength="6" data-ng-model="form.password" placeholder="必填">
+                </label>
+
+            </div>
+            <div class="center-text">
+                <button class="button button-clear button-positive" type="submit">注册</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

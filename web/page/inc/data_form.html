@@ -1,0 +1,271 @@
+<!-- 5x30s 高强度间歇性训练 -->
+<div class="data-form list" data-ng-if="form.movement_id === 101">
+
+    <label class="item item-input">
+        <span class="input-label">第一次</span>
+        <input type="number" step="1" autofocus="autofocus" pattern="\d*" data-ng-model="form.number_1">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">第二次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_2">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">第三次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_3">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">第四次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_4">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">第五次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_5">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">总距离</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_6">
+        <span class="data-unit">英尺</span>
+    </label>
+
+</div>
+
+<!-- Tabata 高强度间歇性训练 -->
+<div class="data-form list" data-ng-if="form.movement_id === 102">
+
+    <label class="item item-input">
+        <span class="input-label">第一次</span>
+        <input type="number" step="1" autofocus="autofocus" pattern="\d*" data-ng-model="form.number_1">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第二次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_2">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第三次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_3">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第四次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_4">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第五次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_5">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第六次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_6">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第七次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_7">
+        <span class="data-unit">英尺</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">第八次</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_8">
+        <span class="data-unit">英尺</span>
+    </label>
+</div>
+
+<!-- 10s 冲刺训练 -->
+<div class="data-form list" data-ng-if="form.movement_id === 103">
+    <label class="item item-input">
+        <span class="input-label">组编号 第</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.group_id">
+        <span class="data-unit">组</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">开始冲刺距离</span>
+        <input type="number" step="1" pattern="\d*" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">结束冲刺距离</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_2">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">冲刺距离</span>
+        <input type="number" pattern="\d*" readonly="readonly" step="1" data-ng-model="form.number_3">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">总距离</span>
+        <input type="number" pattern="\d*" step="1" data-ng-model="form.number_4">
+        <span class="data-unit">英尺</span>
+    </label>
+
+</div>
+
+<!-- 攀爬机耐力训练 -->
+<div class="data-form list" data-ng-if="form.movement_id === 104">
+
+    <label class="item item-input">
+        <span class="input-label">攀爬时间</span>
+        <input type="number" pattern="\d*" step="1" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">分钟</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">距离</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.number_2">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">总距离</span>
+        <input type="number" pattern="\d*" data-ng-model="form.number_3">
+        <span class="data-unit">英尺</span>
+    </label>
+
+    <div class="item item-input">
+        <span class="input-label">阻力</span>
+        <span class="options" data-ng-click="form.number_4 = 0 " data-ng-class="{selected: form.number_4 === 0}">无阻力</span>
+        <span class="options" data-ng-click="form.number_4 = 10" data-ng-class="{selected: form.number_4 === 10}">中等阻力</span>
+        <span class="options" data-ng-click="form.number_4 = 20" data-ng-class="{selected: form.number_4 === 20}">高阻力</span>
+    </div>
+</div>
+
+<!-- Pully：转体提拉 -->
+<div class="data-form list" data-ng-if="form.movement_id === 201">
+
+    <label class="item item-input">
+        <span class="input-label">功率</span>
+        <input type="number" step="1" pattern="\d*" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">瓦</span>
+    </label>
+
+</div>
+
+<!-- 力量耐力：3分钟俯卧撑 -->
+<div class="data-form list" data-ng-if="form.movement_id === 301 || form.movement_id === 302 || form.movement_id === 303 || form.movement_id === 304">
+
+    <label class="item item-input">
+        <span class="input-label">次数</span>
+        <input type="number" step="1" pattern="\d*" autofocus="autofocus" data-ng-model="form.number_1">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">负重</span>
+        <input type="number" step="any" pattern="[\d\.]*" placeholder="可不填" data-ng-model="form.number_2">
+        <span class="data-unit">kg</span>
+    </label>
+
+</div>
+
+<!-- 动作速度训练：六边形跳 -->
+<div class="data-form list" data-ng-if="form.movement_id === 401">
+
+    <label class="item item-input">
+        <span class="input-label">组编号 第</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.group_id">
+        <span class="data-unit">组</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">圈数</span>
+        <input type="number" step="any" pattern="\d*" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">圈</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">双脚跳用时</span>
+        <input type="number" step="any" placeholder="可不填" data-ng-model="form.number_2">
+        <span class="data-unit">秒</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">左脚跳用时</span>
+        <input type="number" step="any" placeholder="可不填" data-ng-model="form.number_3">
+        <span class="data-unit">秒</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">右脚跳用时</span>
+        <input type="number" step="any" placeholder="可不填" data-ng-model="form.number_4">
+        <span class="data-unit">秒</span>
+    </label>
+
+</div>
+
+<!-- 动作速度训练：20次双摇 -->
+<div class="data-form list" data-ng-if="form.movement_id === 402">
+
+    <label class="item item-input">
+        <span class="input-label">组编号 第</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.group_id">
+        <span class="data-unit">组</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">时间</span>
+        <input type="number" step="any" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">秒</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">间断次数</span>
+        <input type="number" step="1" pattern="\d*" placeholder="不填默认为0" data-ng-model="form.number_2">
+        <span class="data-unit">次</span>
+    </label>
+
+</div>
+
+<!-- 动作速度训练：10s 快速脚步 -->
+<div class="data-form list" data-ng-if="form.movement_id === 403">
+
+    <label class="item item-input">
+        <span class="input-label">组编号 第</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.group_id">
+        <span class="data-unit">组</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">次数</span>
+        <input type="number" step="any" pattern="[\d\.]*" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">次</span>
+    </label>
+
+</div>
+
+<!-- 动作速度训练：1分钟单摇 -->
+<div class="data-form list" data-ng-if="form.movement_id === 404 || form.movement_id === 405">
+
+    <label class="item item-input">
+        <span class="input-label">组编号 第</span>
+        <input type="number" step="1" pattern="\d*" data-ng-model="form.group_id">
+        <span class="data-unit">组</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">次数</span>
+        <input type="number" step="1" pattern="\d*" autofocus="autofocus" data-ng-model="form.number_1">
+        <span class="data-unit">次</span>
+    </label>
+
+    <label class="item item-input">
+        <span class="input-label">间断次数</span>
+        <input type="number" step="1" pattern="\d*" placeholder="不填默认为0" data-ng-model="form.number_2">
+        <span class="data-unit">次</span>
+    </label>
+
+</div>

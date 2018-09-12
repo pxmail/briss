@@ -1,0 +1,16 @@
+<ion-content>
+    <h1 class="no-data" data-ng-if="calendar.length === 0">暂无训练数据</h1>
+
+    <div class="calendar-entry" data-ng-repeat="c in calendar">
+        <div class="month" data-on-tap="loadDate(c)">
+            <span data-ng-if="needShowYear($index)">{{c.month.substring(0, 4)}}</span>
+            <div><em>{{c.month| month}}</em>月</div>
+            <ion-spinner icon="ios-small" class="date-loading" data-ng-if="c.loading"></ion-spinner>
+        </div>
+        <div class="date" data-ng-repeat="date in c.date" data-ng-hide="c.hideDate" data-on-tap="history(c.month + '-' + date)">
+            <div><em>{{date}}</em>日</div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</ion-content>

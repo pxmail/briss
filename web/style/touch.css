@@ -1,0 +1,835 @@
+@charset "UTF-8";
+/* 
+    Created on : 2016-7-8, 15:22:45
+    Author     : xieyiming
+*/
+body, input, button, a {
+    font-size: 20px;
+}
+
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/ 
+    /*border-radius: 10px;*/
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    /*    border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+    background-color: #ddd;
+}
+
+dialog {
+    width: 50%;
+    margin: 5% auto;
+    display: block;
+    border: none;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(60deg, #0368c4 60%, #31a3e9);
+    background-image: -webkit-linear-gradient(60deg, #0368c4 60%, #31a3e9);
+    background-image: -ms-linear-gradient(60deg, #0368c4 60%, #31a3e9);
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+    line-height: 84px;
+    font-family: inherit;
+}
+
+header.header-with-left-button {
+    display: flex;
+}
+
+header.header-with-left-button .left-button {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header.header-with-left-button .header-content {
+    flex: auto;
+    margin: 0 30px;
+}
+
+#home.has-header {
+    top: 100px;
+}
+
+input.header-search {
+    border: none;
+    background-color: #d1d1d1 !important;
+    border-radius: 8px;
+    /*line-height: 36px;*/
+    height: 56px !important;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 24px 24px;
+    width: 100%;
+    margin: 22px auto;
+    padding-left: 60px !important;
+    box-sizing: border-box;
+}
+
+#login-page {
+    height: 100%;
+    background-color: #EEEEEE;
+}
+
+#login-page > div {
+    width: 500px;
+    margin: 15% auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #cccccc;
+}
+
+#login-page > div input {
+    background-color: #e3e8ee;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+    padding: 2px 10px;
+}
+
+#login-page > div button {
+    width: 140px;
+    margin-top: 20px;
+    line-height: 32px;
+    border:none;
+    color: white;
+    background-color: #0a9dc7;
+}
+
+#login-page .buttons {
+    text-align: right;
+}
+
+.trainee-page {
+    padding: 0;
+}
+
+
+.trainee-page ion-nav-view {
+    background-color: #EEEEEE !important;
+    width: calc(100% - 380px);
+    margin-left: 380px;
+}
+
+.trainee-page ion-nav-view.child-nav-view {
+    width: auto;
+    margin-left: 0;
+}
+
+
+.trainee-page aside {
+    float: left;
+    height: 100%;
+    width: 380px;
+    background-color: #1666b1;
+    background-image: linear-gradient(45deg, #1666b1, #5e4791, #9e2d78 30%);
+    background-image: -webkit-linear-gradient(-60deg, #1666b1 50%, #003465);
+    background-image: -ms-linear-gradient(45deg, #1666b1, #5e4791, #9e2d78 30%);
+
+    position: relative;
+    z-index: 4;
+    color: white;
+}
+
+.trainee-page aside:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url(../image/ezsport-white.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 185px 40px;
+}
+
+.trainee-page aside .avatar {
+    text-align: center;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.trainee-page aside .avatar > img {
+    width: 150px;
+    height: 150px;
+    display: block;
+
+}
+
+.trainee-page aside .avatar > i {
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.trainee-page aside h3 {
+    text-align: center;
+    color: currentColor;
+    font-size: 36px;
+}
+
+.trainee-page aside .stat {
+    text-align: center;
+    margin: 30px auto 60px auto;
+}
+
+.trainee-page aside .stat > div:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.trainee-page aside .stat h2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.trainee-page aside .stat p {
+    color: #ddd;
+}
+
+.trainee-page aside nav > a {
+    height: 65px;
+    display: flex;
+    display: -webkit-flex;
+    text-decoration: none;
+}
+
+.trainee-page aside nav > a.current {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.trainee-page aside nav > a > img {
+    width: 24px;
+    margin: 9px 20px;
+    display: block;
+}
+
+.trainee-page aside nav > a > div {
+    flex: auto;
+    -webkit-flex: auto;
+    line-height: 65px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: block;
+    width:60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.standard-dialog .popup {
+    width: 700px;
+    background-color: #fff;
+    box-shadow: 1px 0 10px #666;
+}
+
+.trainee-data-page {
+    height: calc(100% - 70px);
+    position: relative;
+    top: 70px;
+}
+
+.evaluation-pane {
+    width: 55%;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.activity-pane {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.activity-pane ol {
+    list-style: decimal;
+    margin: 0 0 0 1.5em;
+}
+
+.activity-pane ol > li {
+    line-height: 60px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.activity-pane ol > li .movement-title {
+
+}
+/** 运动时间 **/
+.activity-pane ol > li .movement-title > span {
+    font-size: 18px;
+    color: #999;
+}
+
+.activity-pane ol li ul {
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 40px;
+}
+
+
+.no-data {
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 48px;
+    margin-top: 20% !important;
+}
+
+.calendar-entry {
+    display: inline;
+}
+
+.calendar-entry > div {
+    float: left;
+    margin: 5px;
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    font-size: 30px;
+    position: relative;
+}
+
+.calendar-entry > div.month {
+    color: #fc7560;
+}
+
+.calendar-entry > div.month > span {
+    color: #AAA;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.calendar-entry > div.month > div {
+    text-align: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.calendar-entry > div.month > div > em {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.calendar-entry > div.date {
+    color: #AAA;
+    transition: all .3s;
+    max-width: 180px;
+    opacity: 1;
+}
+
+.calendar-entry > div.date.ng-enter, .calendar-entry > div.date.ng-hide {
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.calendar-entry > div.date.ng-enter.ng-enter-active {
+    max-width: 180px;
+    opacity: 1;
+}
+
+.calendar-entry > div.date > div {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.calendar-entry > div.date > div > em {
+    font-size: 48px;
+    font-style: normal;
+}
+
+.trainee-list .trainee:nth-child(3n - 1) {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+header.row {
+    padding: 0;
+}
+
+header .header-button > button {
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    line-height: 100px;
+    font-size: 48px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header .header-button > button .badge {
+    position: absolute;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #fc7560;
+    top: 30px;
+}
+
+/* 运动员列表 */
+.trainee-list .trainee {
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 32.5%;
+    background-color: #fff;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.trainee-list .trainee .trainee-container {
+    display: flex;
+    position: relative;
+}
+
+.trainee-list .trainee .trainee-container .avatar {
+    background-color: #CCC;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+
+.trainee-list .trainee .trainee-container .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.trainee-list .trainee .trainee-container .avatar i {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 250px;
+}
+
+.trainee-list .trainee .trainee-container .info {
+    flex: auto;
+    margin-left: 20px;
+    position: relative;
+    font-size: 18px;
+}
+
+.trainee-list .trainee .trainee-container .info .row {
+    margin-bottom: 10px;
+}
+
+.trainee-list .trainee .trainee-container .info .name {
+    font-size: 32px;
+    line-height: 100px;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 30px;
+}
+
+.trainee-list .trainee .trainee-container .info .name .team {
+    font-size: 16px;
+    color: #999999;
+    text-align: right;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status {
+    font-size: 18px;
+    margin-right: 20px;
+    float: right;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status.not-in {
+    color: #fc7560;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status.in {
+    color: #69bceb;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status.finished {
+    color: #999;
+}
+
+.trainee-list .trainee .trainee-container > .info > div {
+    margin-bottom: 15px;
+}
+
+.trainee-list .trainee .trainee-container .info .label-light {
+    color: #999;
+}
+
+.trainee-list .trainee .trainee-container .popup-msg {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.58);
+    line-height: 40px;
+    text-align: center;
+    transition: bottom .2s;
+    color: #fff;
+}
+
+.trainee-list .trainee .trainee-container .popup-msg.show {
+    bottom: 0;
+}
+
+.trainee-list .trainee .trainee-container .info > .trainee-button {
+    position: absolute;
+    width: calc(100% - 10px);
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+}
+.trainee-list .trainee .trainee-container .info > .trainee-button > button {
+    width: 100%;
+    color: #fff;
+    background-color: #69bceb;
+    height: 45px;
+    /*border-radius: 25px;*/
+    border: none;
+}
+
+.trainee-list .trainee .trainee-container .info > .trainee-button > button:active {
+    background-color: #333;
+}
+
+.trainee-list .trainee.not-in .trainee-container .info > .trainee-button > button {
+    background-color: #fc7560;
+}
+
+.trainee-list .trainee.finished .trainee-container > .trainee-button > button {
+    background-color: #999;
+}
+
+.trainee-list .trainee.ng-enter {
+    transition: all .3s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.trainee-list .trainee.ng-enter-active {
+    opacity: 1;
+}
+
+.touch-padding {
+    padding: 30px 60px;
+}
+
+.left-top-buttons > button {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.left-top-buttons > button:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/** 数据列表显示样式 **/
+
+
+.trainee-data {
+    margin: 20px 20px 20px 40px;
+    position: relative;
+}
+
+.trainee-data:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    width: 4px;
+    height: calc(100% - 80px);
+    background-color: #e0e0e0;
+}
+
+
+.trainee-data h2 {
+    font-family: "Arial Narrow";
+    color: #fc7560;
+    position: relative;
+    font-weight: normal;
+    font-size: 30px;
+    padding-left: 1em;
+    margin: 20px 0;
+}
+
+.trainee-data h2:before {
+    content: '';
+    background-color: #fc7560;
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 40%;
+    z-index: 1;
+    border: 2px solid #eee;
+}
+
+.trainee-data > div {
+    margin-left: 40px;
+    border-radius: 6px;
+    background-color: #e3e8ee;
+    border: none;
+    /*max-height: 60px;*/
+    overflow: hidden;
+    padding: 0;
+}
+
+.trainee-data > div .new-data-button {
+    width: 100%;
+    height: 100%;
+    background-color: #e3e8ee;
+    /*    background-image: linear-gradient(to bottom, #eee, #ddd);
+        background-image: -webkit-linear-gradient(to bottom, #eee, #ddd);*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.trainee-data .training-data {
+    padding: 8px;
+}
+.trainee-data .training-data > h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.trainee-data .training-data-button {
+    width: 40px;
+    background-color: #69bceb;
+    color: #fff;
+    border: none;
+}
+
+.trainee-data > div .new-data-button:active {
+    background-color: #c7d3e2;
+}
+
+.trainee-data .training-data-row {
+    padding: 0;
+    max-height: 36px;
+    transition: max-height .5s;
+    width: auto;
+}
+
+.trainee-data .training-data-row.more {
+    max-height: 500px;
+}
+
+.trainee-data .training-data-row ul {
+    font-size: 1rem;
+    padding-left: 1em;
+    line-height: 170%;
+}
+
+.trainee-data > div.training-data-dump {
+    background-color: transparent;
+}
+
+.trainee-home-no-data {
+    height: 100%;
+    text-align: center;
+    color: #ccc;
+}
+
+.trainee-home-no-data h1 {
+    color: #ccc;
+}
+
+.trainee-page .evaluation-radar {
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.trainee-page .evaluation-radar > div {
+    height: 500px;
+    margin: 0 auto;
+}
+
+.trainee-page .evaluation-form.before {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.trainee-page .evaluation-form.after {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.trainee-page .evaluation-form .evaluation-time {
+    line-height: 50px;
+}
+
+.evaluation-form li > label {
+    font-size: 18px;
+    min-width: 180px !important;
+}
+
+.trainee-page .bar-header {
+    height: 70px;
+}
+
+.trainee-page .bar-header .title {
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+
+}
+
+.trainee-page .bar-header .button {
+    min-width: 60px;
+    height: 60px;
+}
+
+
+.trainee-page .has-header {
+    top: 70px;
+}
+
+.trainee-profile-pge .list .item .item-note {
+    font-size: 18px;
+    color: #333;
+}
+
+.report-page .report-table {
+    height: 400px;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: #fff;
+    position: relative;
+}
+
+.report-page .report-table .prompt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    line-height: 400px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color .3s;
+    overflow: hidden;
+}
+
+.report-page .report-table .prompt.show {
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stat-popup .popup {
+    width: 1200px;
+    height: 700px;
+}
+
+.stat-popup .popup .close-button {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.stat-popup .popup .chart-container {
+    height: 580px;
+}
+
+.stat-popup .popup .chart-buttons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.stat-popup .popup .chart-buttons .total-users {
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+    padding-right: 16px;
+    color: #CCC;
+    line-height: 50px;
+}
+
+.stat-popup .popup .chart-buttons button {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    line-height: 50px;
+    width: 100px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-width: 100px;
+    transition: max-width .2s;
+}
+
+.stat-popup .popup .chart-buttons button.highlight-set {
+    background-color: transparent;
+    color: #666;
+}
+
+.stat-popup .popup .chart-buttons button.ng-hide {
+    display: inline-block;
+    max-width: 0;
+}

@@ -1,0 +1,1404 @@
+@charset "UTF-8";
+/*
+(C) 2016 EZ Sport Ltd
+*/
+/* 
+    Created on : 2016-7-26, 15:48:18
+    Author     : xieyiming
+*/
+
+header {
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    padding: 0;
+    background-color: #1E88E5;
+    background-image: linear-gradient(60deg, #0368c4 60%, #31a3e9);
+    background-image: -webkit-linear-gradient(60deg, #0368c4 60%, #31a3e9);
+    background-image: -ms-linear-gradient(60deg, #0368c4 60%, #31a3e9);
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    /*box-shadow: 0px 3px 3px #ccc;*/
+}
+
+header.row {
+    padding: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0 0 0 30px;
+    color: inherit;
+    font-size: 1.3rem;
+    line-height: 60px;
+}
+
+header .header-button {
+    min-width: 120px;
+    line-height: 60px;
+}
+
+header .header-button > button {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-size: 24px;
+    vertical-align: top;
+    line-height: 60px;
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    /*    border-left: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin-right: -1px;*/
+    border-top: none;
+    border-bottom: none;
+}
+
+
+header .header-button > button .badge {
+    position: absolute;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #fc7560;
+    top: 15px;
+}
+
+header.header-with-left-button {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+header.header-with-left-button .left-button {
+    width: 60px;
+    text-align: center;
+    font-size: 24px;
+}
+
+header.header-with-left-button .header-content {
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    padding-right: 20px;
+}
+
+#home.has-header {
+    top: 60px;
+}
+
+input.header-search {
+    border: none;
+    background-color: #e0e0e0 !important;
+    border-radius: 6px;
+    height: 36px !important;
+    color: #444;
+    font-size: 1rem;
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 24px 24px;
+    width: 100%;
+    margin: 12px auto;
+    padding-left: 40px !important;
+    box-sizing: border-box;
+}
+
+#login-page {
+    background-image: url(../image/coach-login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#login-page > form .input-item {
+    margin-bottom: 20px;
+}
+
+#login-page > form input {
+    background-color: #999;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#login-page > form input:-webkit-autofill {
+    /*-webkit-text-fill-color: #fff;*/
+    -webkit-box-shadow: inset 0 0 0px 200px #999;
+    box-shadow: inset 0 0 0px 200px #999;
+}
+
+#login-page > form button.login-button {
+    background-color: #073765;
+    color: #fff;
+}
+
+.trainee-page {
+    padding: 0;
+}
+
+
+.trainee-page ion-nav-view {
+    background-color: #EEEEEE !important;
+    width: calc(100% - 320px);
+    margin-left: 320px;
+}
+
+.trainee-page ion-nav-view.child-nav-view {
+    width: auto;
+    margin-left: 0;
+}
+
+.trainee-page aside {
+    float: left;
+    height: 100%;
+    width: 320px;
+    background-color: #1666b1;
+    background-image: linear-gradient(45deg, #1666b1, #5e4791, #9e2d78 30%);
+    background-image: -webkit-linear-gradient(-60deg, #1666b1 50%, #003465);
+    background-image: -ms-linear-gradient(45deg, #1666b1, #5e4791, #9e2d78 30%);
+
+    position: relative;
+    z-index: 4;
+    color: white;
+}
+
+.trainee-page aside .avatar {
+    text-align: center;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.trainee-page aside .avatar > img {
+    width: 120px;
+    height: 120px;
+    display: block;
+
+}
+
+.trainee-page aside .avatar > i {
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.trainee-page aside h3 {
+    text-align: center;
+    color: currentColor;
+}
+
+.trainee-page aside .stat {
+    text-align: center;
+    margin: 30px auto 60px auto;
+}
+
+.trainee-page aside .stat > div:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.trainee-page aside .stat h2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.trainee-page aside .stat p {
+    color: #ddd;
+}
+
+.trainee-page aside nav > a {
+    height: 55px;
+    display: flex;
+    display: -webkit-flex;
+    text-decoration: none;
+}
+
+.trainee-page aside nav > a.current {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.trainee-page aside nav > a > img {
+    width: 24px;
+    margin: 9px 20px;
+    display: block;
+}
+
+.trainee-page aside nav > a > div {
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    line-height: 55px;
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.trainee-page aside .buttons {
+    margin-bottom: 20px;
+}
+
+.trainee-page aside .buttons > div {
+    width: 50%;
+    text-align: center;
+}
+
+
+.back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: block;
+    width:60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.activity-pane {
+    padding: 0 0 20px 20px;
+    margin-left: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.activity-pane ol {
+    list-style: decimal;
+    margin: 0 0 0 1.5em;
+}
+
+.activity-pane ol li {
+    line-height: 60px;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.calendar-entry {
+    display: inline;
+}
+
+.calendar-entry > div {
+    float: left;
+    margin: 10px;
+    width: 145px;
+    height: 145px;
+    background-color: #fff;
+    font-size: 30px;
+    position: relative;
+}
+
+.calendar-entry > div.month {
+    color: #fc7560;
+}
+.calendar-entry > div.month > .date-loading {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+
+.calendar-entry > div.month > span {
+    color: #AAA;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.calendar-entry > div.month > div {
+    text-align: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.calendar-entry > div.month > div > em {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.calendar-entry > div.date {
+    color: #AAA;
+    transition: all .3s;
+    max-width: 180px;
+    opacity: 1;
+}
+
+.calendar-entry > div.date.ng-enter, .calendar-entry > div.date.ng-hide {
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.calendar-entry > div.date.ng-enter.ng-enter-active {
+    max-width: 180px;
+    opacity: 1;
+}
+
+.calendar-entry > div.date > div {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.calendar-entry > div.date > div > em {
+    font-size: 48px;
+    font-style: normal;
+}
+
+.standard-dialog .popup {
+    width: 700px;
+    background-color: #fff;
+    box-shadow: 1px 0 10px #666;
+}
+
+.trainee-list .trainee {
+    text-decoration: none;
+}
+
+.trainee-list .trainee .trainee-container {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+.trainee-list .trainee .trainee-container .info {
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+}
+
+.trainee-btn {
+    border-radius: 2px;
+    min-width: 140px;
+    box-shadow: 0px 1px 1px #777777;
+    line-height: 32px;
+    border: none;
+}
+
+.trainee-btn.large {
+    width: 280px;
+    font-size: 1rem;
+    line-height: 40px;
+}
+
+.trainee-btn.training {
+    background-image: linear-gradient(top, #3980ac, #1f9efb);
+    background-image: -webkit-linear-gradient(top, #3980ac, #1f9efb);
+    background-image: -moz-linear-gradient(top, #3980ac, #1f9efb);
+    background-image: -ms-linear-gradient(top, #3980ac, #1f9efb);
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.trainee-btn.not-training {
+    background-image: linear-gradient(top, #dddddd, #ffffff);
+    background-image: -webkit-linear-gradient(top, #dddddd, #ffffff);
+    background-image: -moz-linear-gradient(top, #dddddd, #ffffff);
+    background-image: -ms-linear-gradient(top, #dddddd, #ffffff);
+}
+
+/** 数据列表显示样式 **/
+
+
+.trainee-data {
+    margin: 20px 20px 20px 40px;
+    position: relative;
+}
+
+.trainee-data:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    width: 4px;
+    height: calc(100% - 120px);
+    background-color: #CCC;
+}
+
+.trainee-data h2 {
+    font-family: "Arial Narrow";
+    color: #fc7560;
+    position: relative;
+    font-weight: normal;
+    font-size: 30px;
+    padding-left: 1em;
+    margin: 20px 0;
+}
+
+.trainee-data h2:before {
+    content: '';
+    background-color: #fc7560;
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 40%;
+    z-index: 1;
+    border: 2px solid #eee;
+}
+
+.trainee-data > div {
+    margin-left: 40px;
+    border-radius: 6px;
+    background-color: #e3e8ee;
+    border: none;
+    min-height: 60px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.trainee-data > div.new-data-button-container {
+    background-color: transparent;
+}
+
+.train-date {
+    margin-top:16px;
+    font-size: 18px;
+    color: #AAA;
+    text-align: center;
+}
+
+.trainee-data > div .new-data-button, .end-train-button {
+    width: 100%;
+    height: 100%;
+    background-color: #69bceb;
+    color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.trainee-data .training-data {
+    padding: 10px 16px;
+}
+.trainee-data .training-data > h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.trainee-data .training-data-button {
+    width: 55px;
+    background-color: #69bceb;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.trainee-data > div .new-data-button:active {
+    background-color: #c7d3e2;
+}
+
+.trainee-data .training-data-row {
+    padding: 0;
+    width: auto;
+}
+
+.trainee-data .training-data-row ul {
+    font-size: 1rem;
+    padding-left: 1.5em;
+    line-height: 170%;
+}
+
+.trainee-data > div.training-data-dump {
+    background-color: transparent;
+}
+
+/** 录入数据选择动作列表样式 **/
+.movement-list {
+    display: inline-block;
+    width: 49.5%;
+    vertical-align: top;
+    margin-bottom: 15px;
+}
+
+.movement-list:nth-child(odd) {
+    margin-right: 1%;
+}
+.movement-list > h3 {
+    font-size: 1rem;
+    color: #999999;
+}
+
+.movement-list > button {
+    display: block;
+    width: 100%;
+    border: none;
+    line-height: 45px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    margin-bottom: 2px;
+}
+
+.movement-list > button:active {
+    background-color: #e3e8ee;
+}
+
+/** 录入数据选择动作列表样式 END **/
+
+/** 数据录入表单样式 START **/
+.data-form .item {
+    border-color: transparent !important;
+}
+
+.data-form .item input {
+    background-color: #e3e8ee;
+    padding: 0 10px;
+}
+
+.data-form .item input:read-only {
+    background-color: #e0e0e0;
+}
+
+.data-form .item input:focus {
+    border: 1px solid #69bceb;
+}
+
+.data-label {
+    display: inline-block;
+    width: 120px;
+}
+
+.data-value {
+    display: inline-block;
+}
+
+.data-unit {
+    display: inline-block;
+    color: #999999;
+}
+
+.data-form .item .data-unit {
+    min-width: 50px;
+    padding-left: 10px;
+}
+
+.data-form .item .input-label {
+    width: 140px;
+}
+
+/** 数据录入表单样式 END **/
+
+.left-top-buttons > button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.left-top-buttons > button:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.data-tab-header {
+    padding: 0;
+    background-color: #fff;
+}
+
+.data-tab-header > ul {
+    width: 200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.data-tab-header > ul > li {
+    line-height: 46px;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;   
+    border-bottom: 3px solid transparent;
+}
+
+.data-tab-header > ul > li.active {
+    border-bottom-color: #fc7560;
+}
+
+.end-train-button-containter {
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.end-train-button-containter > button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 6px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #000;
+    width: 100%;
+}
+
+
+.end-train-button-containter > button:active {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.settings-page aside {
+    float: left;
+    height: 100%;
+    width: 320px;
+    /*box-shadow: 5px 0px 10px #cccccc;*/
+    position: relative;
+    z-index: 4;
+    background-image: linear-gradient(45deg, #1666b1, #5e4791, #9e2d78 30%);
+    background-image: -webkit-linear-gradient(-60deg, #1666b1 50%, #003465);
+    background-image: -ms-linear-gradient(45deg, #1666b1, #5e4791, #9e2d78 30%);
+}
+
+.settings-page aside:after, .trainee-page aside:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url(../image/ezsport-white.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 139px 30px;
+    z-index: -1;
+}
+
+.settings-page ion-nav-view {
+    background-color: #EEEEEE !important;
+    width: calc(100% - 320px);
+    margin-left: 320px;
+}
+
+.settings-page ion-nav-view.child-nav-view {
+    width: auto;
+    margin-left: 0;
+}
+
+.settings-page aside > .list > .item {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.settings-page aside > .list > .item.item-divider {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.settings-page aside > .list > .item.current {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.setting-page ion-nav-view > .pane {
+    background-color: #EEEEEE;
+    padding: 25px;
+}
+
+/* 运动员列表 */
+.settings-trainees-page .trainee-list {
+    border: 1px solid #ddd;
+    margin-bottom: 0;
+}
+.trainee-list .trainee {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    height: 200px;
+}
+
+.trainee-list .trainee.not-in .trainee-container .info > .trainee-button > button {
+    background-color: #fc7560;
+}
+
+.trainee-list .trainee.finished .trainee-container > .trainee-button > button {
+    background-color: #666;
+}
+
+.trainee-list .trainee .trainee-container {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    position: relative;
+}
+
+.trainee-list .trainee.ng-enter {
+    transition: all .3s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.trainee-list .trainee.ng-enter-active {
+    opacity: 1;
+}
+
+.trainee-list .trainee .trainee-container .avatar {
+    background-color: #CCC;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.trainee-list .trainee .trainee-container .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.trainee-list .trainee .trainee-container .avatar i {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 200px;
+}
+
+.trainee-list .trainee .trainee-container .info {
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    margin-left: 20px;
+    position: relative;
+}
+
+.trainee-list .trainee .trainee-container .info .name {
+    font-size: 24px;
+    line-height: 60px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.trainee-list .trainee .trainee-container .info .team {
+    color: #999999;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status {
+    font-size: 14px;
+    margin-right: 10px;
+    float: right;
+    font-weight: normal;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status.not-in {
+    color: #fc7560;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status.in {
+    color: #69bceb;
+}
+
+.trainee-list .trainee .trainee-container > .info > .name .status.finished {
+    color: #666;
+}
+
+.trainee-list .trainee .trainee-container > .info > div {
+    margin-bottom: 10px;
+}
+
+.label-light {
+    color: #999;
+}
+
+.text-divider {
+    color: #ccc;
+}
+
+.trainee-list .trainee .trainee-container .popup-msg {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.58);
+    line-height: 40px;
+    text-align: center;
+    transition: bottom .2s;
+    color: #fff;
+}
+
+.trainee-list .trainee .trainee-container .popup-msg.show {
+    bottom: 0;
+}
+
+.trainee-list .trainee .trainee-container .info > .trainee-button {
+    /*    margin-right: 10px;*/
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+}
+.trainee-list .trainee .trainee-container .info > .trainee-button > button {
+    width: 100%;
+    max-width: 260px;
+    color: #fff;
+    background-color: #69bceb;
+    height: 40px;
+    /*border-radius: 17px;*/
+    border: none;
+}
+
+.trainee-list .trainee .trainee-container .info > .trainee-button > button:active {
+    background-color: #333;
+}
+
+.settings-trainees-page .list.trainee-list .item-sport {
+    background-color: transparent;
+    border-bottom: 1px solid;
+}
+
+.settings-trainees-page .list.trainee-list .item {
+    border: none;
+}
+
+.settings-trainees-page .list.trainee-list .item:after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    width: calc(100% - 72px);
+    border-bottom: 1px solid #eee;
+}
+
+.settings-trainees-page .list.trainee-list .item:last-child:after {
+    border-bottom: none;
+}
+
+.settings-trainees-page .list.trainee-list .item .team {
+    display: inline-block;
+    width: 200px;
+    color: #999;
+}
+
+.settings-trainees-page .list.trainee-list .item .day {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.settings-trainees-page .list.trainee-list .item .buttons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: calc(100% - 3px);
+    width: 160px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+.settings-trainees-page .list.trainee-list .item .buttons > div {
+    border: none;
+    width: 50%;
+    line-height: 75px;
+    text-align: center;
+    /*color: #fff;*/
+}
+
+.settings-trainees-page .block-title {
+    line-height: 47px;
+    padding: 0 6px;
+}
+.settings-trainees-page  .pending-trainee-list {
+    margin-bottom: 0;
+}
+
+.input-suffix {
+    margin: 0 10px;
+}
+
+.hidden-password {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.trainee-page .evaluation-radar {
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+.trainee-page .evaluation-radar > div {
+    height: 400px;
+}
+
+.trainee-page .evaluation-form.before {
+    margin: 10px auto;
+    overflow: hidden;
+    /*border-radius: 6px;*/
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+.trainee-page .evaluation-form.after {
+    padding-top: 20px;
+    margin: 10px auto;
+    overflow: hidden;
+    /*border-radius: 6px;*/
+    background-color: #fff;
+}
+
+.trainee-page .evaluation-form .evaluation-time {
+    margin-bottom: 30px;
+}
+
+.subpage .bar-header {
+    height: 51px;
+}
+
+.subpage .has-header {
+    top: 51px;
+}
+
+.subpage .bar-header h1.title {
+    line-height: 50px;
+}
+
+.subpage .profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 30px auto;
+}
+
+.subpage .bar-header button {
+    width: 40px;
+}
+
+.warning {
+    color: #ff6600;
+}
+
+.coach-list-page .coach-list .coach-role {
+    float: right;
+    font-size: 0.9rem;
+    color: #AAA;
+}
+
+.gen-touch-code-page .touch-code {
+    height: 100px;
+    margin-bottom: 30px;
+    border: 1px dotted #999;
+    background-color: #fff;
+}
+
+.gen-touch-code-page .touch-code > div {
+    width: 16.66666%;
+    border-right: 1px dotted #999;
+    text-align: center;
+    font-size: 64px;
+    line-height: 90px;
+}
+
+.gen-touch-code-page .touch-code > div:last-child {
+    border-right: none;
+}
+
+.options {
+    padding: 6px 12px;
+    border: 1px dotted #ccc;
+    margin-right: 20px;
+}
+
+.options.selected {
+    background-color: #69bceb;
+    color: #fff;
+}
+
+.report-page .report-table th {
+    line-height: 250%;
+}
+
+.page-note {
+    padding: 10px 0;
+}
+
+
+.no-data {
+    text-align: center;
+    color: #AAA;
+    font-size: 24px;
+    margin-top: 25% !important;
+}
+
+@media (min-width: 1025px) {
+
+    .trainee-list .trainee {
+        width: 32.5%;
+    }
+
+
+    .trainee-list .trainee:nth-child(3n - 1) {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    #briss-logo {
+        width: 300px;
+        height: 38px;
+    }
+
+    #ezsport-logo {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 140px;
+        height: 30px;
+    }
+
+    #login-page > form {
+        position: absolute;
+        width: 400px;
+        margin: auto;
+        right: 50px;
+        bottom: 100px;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .trainee-list .trainee {
+        width: 49%;
+        vertical-align: top;
+    }
+
+    .trainee-list .trainee:nth-child(odd) {
+        margin-right: 2%;
+    }
+
+    #briss-logo {
+        width: 300px;
+        height: 38px;
+    }
+
+    #ezsport-logo {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 140px;
+        height: 30px;
+    }
+
+    #login-page > form {
+        position: absolute;
+        width: 400px;
+        margin: auto;
+        right: 50px;
+        bottom: 100px;
+    }
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .trainee-list .trainee {
+        width: 100%;
+    }
+
+    .standard-dialog .popup {
+        width: 95%;
+        /*height: 100%;*/
+    }
+
+    #briss-logo {
+        width: 300px;
+        height: 38px;
+    }
+
+    #ezsport-logo {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 140px;
+        height: 30px;
+    }
+
+    #login-page > form {
+        position: absolute;
+        width: 90%;
+        margin: auto;
+        left: 5%;
+        bottom: 100px;
+    }
+
+    .trainee-page aside {
+        width: 250px;
+    }
+
+    .trainee-page ion-nav-view {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+}
+
+/* 手机适配 */
+@media only screen and (max-device-width:480px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    #briss-logo {
+        width: 300px;
+        height: 38px;
+    }
+
+    #ezsport-logo {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 140px;
+        height: 30px;
+    }
+
+    #login-page > form {
+        position: absolute;
+        width: 90%;
+        margin: auto;
+        left: 5%;
+        bottom: 100px;
+    }
+
+    .no-data {
+        font-size: 1rem;
+    }
+
+    header {
+        background-image: none;
+    }
+
+    header h1 {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .trainee-list .trainee {
+        width: 100%;
+        height: 80px;
+        margin: 0;
+        display: block;
+    }
+
+    .trainee-list .trainee .trainee-container:after {
+        content: '';
+        border-bottom: 1px solid #eee;
+        position: absolute;
+        width: 95%;
+        right: 0;
+        bottom: 0;
+    }
+
+    .trainee-list .trainee .trainee-container .avatar {
+        background-color: #CCC;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    .trainee-list .trainee .trainee-container .avatar img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 15px;
+    }
+
+    .trainee-list {
+        padding: 10px 0;
+    }
+
+    .trainee-list .trainee .trainee-container .info {
+        margin-left: 0;
+    }
+
+    .trainee-list .trainee .trainee-container .info .name {
+        font-size: 1rem;
+        line-height: 180%;
+        margin-bottom: 4px;
+        border-bottom: none;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .trainee-list .trainee .trainee-container > .info > .name .status {
+        font-weight: normal;
+    }
+    .trainee-list .trainee .trainee-container .info .sport {
+        display: none;
+    }
+
+    .trainee-list .trainee .trainee-container .info .base {
+        display: none;
+    }
+
+    .trainee-list .trainee .trainee-container .info > .trainee-button {
+        display: none;
+    }
+
+
+    .trainee-page aside {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .trainee-page ion-nav-view {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .trainee-data {
+        margin: 10px;
+    }
+
+    .trainee-data .new-data-button-container {
+        margin-left: 0;
+    }
+
+    .padding {
+        padding: 0;
+    }
+
+    .evaluation-form li {
+        display: block !important;
+        margin: -1px 0 0 0 !important;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .evaluation-form li > label {
+        line-height: 40px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .evaluation-form li.evaluation-time {
+        padding: 10px;
+        color: #999;
+    }
+
+    .evaluation-form li > div {
+        margin-bottom: 10px;
+    }
+
+    .evaluation-pane .evaluation-form li > label {
+        width: 100%;
+    }
+
+    .popup-body {
+        padding: 0 !important;
+    }
+
+    .movement-list {
+        display: block;
+        width: 100%;
+    }
+
+    .movement-list:nth-child(odd) {
+        margin-right: 0;
+    }
+}
+
+.row.no-padding {
+    padding: 0;
+}
+
+
+.stat-popup .popup {
+    width: 900px;
+    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.stat-popup .popup .close-button {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.stat-popup .popup .chart-container {
+    height: 480px;
+}
+
+.stat-popup .popup .chart-buttons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.stat-popup .popup .chart-buttons .total-users {
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+    padding-right: 16px;
+    color: #CCC;
+    line-height: 50px;
+}
+
+.stat-popup .popup .chart-buttons button {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    line-height: 50px;
+    width: 100px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-width: 100px;
+    transition: max-width .2s;
+}
+
+.stat-popup .popup .chart-buttons button.highlight-set {
+    background-color: transparent;
+    color: #666;
+}
+
+.stat-popup .popup .chart-buttons button.ng-hide {
+    display: inline-block;
+    max-width: 0;
+}
+
+.dlg-history-training .popup {
+    width: 400px;
+}
+
+.dlg-history-training .training-date {
+    margin-bottom: 1em;
+}
+
+.dlg-history-training ul {
+    margin: 0 20px;
+}
+
+.dlg-history-training #data-warning-msg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    top: 0;
+    background-color: rgba(255, 64, 0, 0.9);
+    line-height: 44px;
+    color: #ffffff;
+}

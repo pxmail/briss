@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+(C) 2016, EZ Sport Ltd.
+-->
+<html lang="zh-Hans" manifest="briss.manifest">
+    <head>
+        <title>北京体育科学研究所</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">-->
+        <meta name="format-detection" content="telephone=no">
+
+        <script type="text/javascript">
+            // 用此变量区分不同终端
+            Window.prototype.__terminal = 'trainee';
+            // Check if a new cache is available on page load.
+            window.addEventListener('load', function (e) {
+
+                window.applicationCache.addEventListener('updateready', function (e) {
+                    if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+                        document.getElementById('msg').className = 'show';
+                    }
+                }, false);
+
+            }, false);
+        </script>
+        <script src="js/lib/requirejs/require-min.js" defer async="async" data-main="js/main"></script>
+        <link href="js/lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <link href="style/theme.css" rel="stylesheet">
+        <link href="style/trainee.css" rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/icons/trainee/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/icons/trainee/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/icons/trainee/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/icons/trainee/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/icons/trainee/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/icons/trainee/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/icons/trainee/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/icons/trainee/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/trainee/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/icons/trainee/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/trainee/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/icons/trainee/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/trainee/favicon-16x16.png">
+        <link rel="manifest" href="/icons/trainee/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+    <body data-ng-controller="traineeMainCtrl">
+        <div id="msg">
+            发现新版本
+            <button class="button button-clear button-small button-dark" onclick="window.location.reload()">
+                立即更新
+            </button>
+            <button class="button button-clear button-small button-light" onclick="document.getElementById('msg').className = ''">
+                暂不更新
+            </button>
+        </div>
+        <ion-nav-view></ion-nav-view>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<ion-view class="gen-touch-code-page subpage">
+    <div class="bar bar-header register-header">
+        <h1 class="title">生成触屏端验证码</h1>
+    </div>
+    <!-- 触屏端验证码信息 -->
+    <ion-content class="gray-bg has-header" padding="true">
+        <div class="page-note">
+            此验证码用于触屏端登录、查看运动员资料鉴权使用
+        </div>
+        <div class="row touch-code">
+            <div>{{touchCode[0]}}</div>
+            <div>{{touchCode[1]}}</div>
+            <div>{{touchCode[2]}}</div>
+            <div>{{touchCode[3]}}</div>
+            <div>{{touchCode[4]}}</div>
+            <div>{{touchCode[5]}}</div>
+        </div>
+        <button class="button button-positive button-block" data-ng-click="genCode()">生成验证码</button>
+    </ion-content>
+</ion-view>

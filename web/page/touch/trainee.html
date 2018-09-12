@@ -1,0 +1,42 @@
+<div class="trainee-page">
+    <aside>
+        <div class="left-top-buttons">
+            <button class="ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="showBackButton"></button>
+            <button class="ion-ios-home" data-ui-sref="home"></button>
+        </div>
+        <div class="avatar">
+            <img data-ng-src="{{trainee.avatar}}-thumb200" alt="trainee.name" data-ng-if="trainee.avatar !== ''">
+            <i data-ng-if="trainee.avatar === ''" class="icon ion-person"></i>
+        </div>
+        <h3>{{trainee.name}}</h3>
+        <div class="row stat">
+            <div class="col col-50">
+                <h2>{{totalActions}}</h2>
+                <p>完成动作数</p>
+            </div>
+            <div class="col">
+                <h2>{{trainee.day}}</h2>
+                <p>训练天数</p>
+            </div>
+        </div>
+        <nav>
+            <a data-ui-sref=".home" data-ng-class="{current: stateName.indexOf('trainee.home') === 0}">
+                <img src="image/icon-today.svg" alt="今日训练">
+                <div>今日训练</div>
+            </a>
+            <a data-ui-sref=".calendar" data-ng-class="{current: stateName.indexOf('trainee.calendar') === 0 || stateName.indexOf('trainee.history') === 0}">
+                <img src="image/icon-history.svg" alt="历史记录">
+                <div>历史记录</div>
+            </a>
+            <a data-ui-sref=".data.movements" data-ng-class="{current: stateName.indexOf('trainee.data') === 0}">
+                <img src="image/icon-data.svg" alt="数据报表">
+                <div>数据报表</div>
+            </a>
+            <a data-on-release="getProfile()" data-ng-class="{current: stateName.indexOf('trainee.profile') === 0}">
+                <img src="image/icon-user.svg" alt="个人资料">
+                <div>个人资料</div>
+            </a>
+        </nav>
+    </aside>
+    <ion-nav-view></ion-nav-view>
+</div>

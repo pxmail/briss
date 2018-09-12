@@ -1,0 +1,30 @@
+<ion-view class="subpage trainee-profile-pge">
+    <div class="bar bar-header">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="showSimple !== true"></button>
+        <h1 class="title">教练员资料</h1>
+    </div>
+    <ion-content class="has-header gray-bg" padding="true">
+        <div class="page-note">可修改教练员角色</div>
+        <div class="list">
+            <label class="item">姓名
+                <span class="item-note">{{coach.name}}</span>
+            </label>
+            <label class="item item-select">角色
+                <!-- <span class="item-note">{{coach.role_id| role}}</span> -->
+                <select data-ng-model="coach.role_id" required="required">
+                   <option value="2">管理员</option>
+                   <option value="3">教练员</option>
+                </select>
+            </label>
+            <div class="center-text" data-ng-if="coach.id != my_uid">
+                <button class="button button-clear button-assertive" data-ng-click="resetPassword(coach)">重置密码</button>
+            </div>
+            <div class="center-text" data-ng-if="coach.id != my_uid">
+                <button class="button button-clear button-assertive" data-ng-click="forbidLogin(coach)">禁止登录</button>
+            </div>
+            <div class="center-text" data-ng-if="coach.id != my_uid">
+                <button class="button button-clear button-assertive" data-ng-click="updateProfile(coach)">提交修改</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

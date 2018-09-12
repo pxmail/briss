@@ -1,0 +1,37 @@
+<div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="isHistoryPage"></button>
+    <h1 class="title" data-ng-if="isHistoryPage">历史数据</h1>
+    <h1 class="title" data-ng-if="!isHistoryPage">今日训练</h1>
+</div>
+
+<div class="row gray-bg trainee-data-page">
+    <div class="evaluation-pane">
+        <div data-ez-evaluation="evalForm" data-readonly="true" data-full-mode="evalForm.quality > 0 "></div>
+        <div class="evaluation-radar">
+            <div data-ez-radar="evalForm"></div>
+        </div>
+    </div>
+
+    <div class="activity-pane flex">
+        <div class="trainee-data">
+            <h2 data-ng-repeat-start="row in trainings">{{row.training_time.substring(0, 5)}}</h2>
+            <div data-ng-repeat-end class="row training-data-row" data-ng-class="{'more' : row.details}">
+                <div class="training-data flex">
+                    <h3>{{row.movement_name}}</h3>
+                    <div data-ez-data="row"></div>
+                </div>
+                <button class="training-data-button" data-ng-click="row.details = !row.details">
+                    <i class="ion-icon" data-ng-class="{'ion-chevron-down' : !row.details, 'ion-chevron-up' : row.details}"></i>
+                </button>
+            </div>
+            <h2 data-ng-if="trainings.length > 0">&nbsp;</h2>
+            <div class="training-data-dump" data-ng-if="trainings.length > 0">
+                <div>&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="trainee-home-no-data" data-ng-if="trainings && !trainings.length">
+            <h1>暂无训练记录</h1>
+        </div>
+    </div>
+</div>

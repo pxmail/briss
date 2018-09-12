@@ -1,0 +1,15 @@
+<ion-view class="subpage">
+    <div class="bar bar-header register-header">
+        <h1 class="title">训练基地列表</h1>
+    </div>
+    <!-- 基地信息 -->
+    <ion-content class="gray-bg has-header" padding="true">
+        <div class="list">
+            <a ng-repeat="b in bases" class="item item-icon-right" data-ui-sref="^.edit_base({base_id: b.id})">
+                {{b.name}}
+                <span class="item-note">{{b.trainee_num}} 名运动员</span>
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

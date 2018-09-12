@@ -1,0 +1,48 @@
+<ion-view>
+    <header class="row">
+        <h1 class="flex">BRISS - 数字化体能训练实验室</h1>
+        <div class="header-button right-text">
+            <button data-ng-click="showStat()">
+                <i class="ion-person"></i>
+                <span class="badge">{{trainees.length}}</span>
+            </button>
+            <button data-ng-click="gotoQuery()">
+                <i class="ion-person-add"></i> 
+            </button>
+            <button data-ui-sref="settings.trainees" data-ng-if="__terminal === 'coach' ">
+                <i class="ion-ios-more"></i>
+            </button>
+        </div>
+    </header>
+
+    <ion-content id="home" class="has-header gray-bg with-logo" padding="true">
+
+        <div class="trainee-list">
+            <a class="trainee" data-ng-repeat="t in trainees" data-ui-sref="trainee.home({trainee_id: t.id})">
+                <div class="trainee-container">
+                    <div class="avatar">
+                        <i class="ion-person" data-ng-if="t.avatar === ''"></i>
+                        <img data-ng-src="{{t.avatar}}-thumb200" alt="{{t.name}}" data-ng-if="t.avatar !== ''">
+                    </div>
+                    <!-- 运动员信息 -->
+                    <div class="info">
+                        <div class="name ">{{t.name}} <span class="status">训练中 ［第 {{t.day}} 天]</span></div>
+                        <div class="team">{{t.team}}</div>
+                        <div class="sport"><span class="label-light">项目：</span>{{t.sport}}</div>
+                        <div class="base"><span class="label-light">基地：</span>{{t.base_name}}</div>
+                    </div>
+                    <div class="popup-msg" data-ng-class="{'show' : t.movement_name}">刚刚完成了{{t.movement_name}}</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="no-data" data-ng-if="!trainees">
+            正在加载运动员资料……
+        </div>
+        
+        <div class="no-data" data-ng-if="trainees && trainees.length === 0">
+            当前没有运动员入场训练
+        </div>
+
+    </ion-content>
+</ion-view>

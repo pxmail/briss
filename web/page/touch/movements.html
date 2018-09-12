@@ -1,0 +1,27 @@
+<ion-view>
+    <div class="bar bar-header bar-light">
+        <h1 class="title">数据报表 - 选择项目</h1>
+    </div>
+    <ion-content class="has-header">
+        <div class="list">
+
+            <div class="item item-divider">
+                训练状态
+            </div>
+
+            <a class="item item-icon-right"  data-ui-sref="trainee.data.report({movement_id: 'eval'})">
+                训练前后状态评估表
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+
+            <div data-ng-repeat="( group, items ) in movements">
+                <div class="item item-divider">{{group}}</div>
+                <a class="item item-icon-right" data-ng-repeat="item in items" data-ui-sref="trainee.data.report({movement_id: item.id})">
+                    {{item.name}}
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

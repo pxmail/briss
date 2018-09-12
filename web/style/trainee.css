@@ -1,0 +1,393 @@
+@charset "UTF-8";
+
+/*
+(C) 2016 EZ Sport Ltd
+*/
+/* 
+    Created on : 2016-7-18, 21:11:08
+    Author     : xieyiming
+*/
+
+[nav-bar-transition=ios] [nav-bar=entering] .bar, [nav-bar-transition=ios] [nav-bar=active] .bar {
+    background-color: #1E88E5;
+}
+
+.bar .title {
+    color: #fff;
+}
+
+.bar .button {
+    color: #fff;
+}
+
+.bar.bar-header {
+    background-color: #31a3e9 !important;
+}
+
+#login-page {
+    background-image: url(../image/trainee-login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #f4f4f4;
+}
+
+#login-page #briss-logo {
+    width: 237px;
+    height: 30px;
+}
+
+#login-page #ezsport-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 93px;
+    height: 20px;
+}
+
+#login-page > form {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+}
+
+
+#login-page > form .input-item {
+    margin-bottom: 20px;
+}
+
+#login-page > form input {
+    background-color: #999;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#login-page > form input:-webkit-autofill {
+    /*-webkit-text-fill-color: #fff;*/
+    -webkit-box-shadow: inset 0 0 0px 200px #999;
+    box-shadow: inset 0 0 0px 200px #999;
+    color: #999 !important;
+}
+
+#login-page > form button.login-button {
+    background-color: #073765;
+    color: #fff;
+}
+
+.register-header {
+    background: linear-gradient(to bottom, #1866b1, #2673c1);
+    background: -webkit-linear-gradient(to bottom, #1866b1, #2673c1);
+    border-bottom: 1px solid #ddd;
+}
+
+.register-header > h1 {
+    color: #fff;
+}
+
+.register-header > a:before {
+    color: #fff !important;
+    font-size: 18px !important;
+}
+
+.register-form input {
+    text-align: right;
+}
+/*
+.register-form .item-input {
+    margin-left: 16px;
+    padding-left: 6px;
+    border-left: none;
+}
+
+.register-form .item-input:first-child {
+    border-top: none;
+}
+
+.register-form .item:last-child {
+    border-bottom: none;
+}*/
+
+.register-form .item-input.item-input-with-suffix > input {
+    padding-right: 4px;
+}
+
+.register-form .item-input.item-input-with-suffix .input-suffix {
+    display: inline-block;
+    width: 80px;
+}
+
+.nav-button:before {
+    font-size: 24px !important;
+}
+
+.evaluation-form li {
+    display: block !important;
+    margin: -1px 0 0 0 !important;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.evaluation-form li > label {
+    line-height: 40px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.evaluation-form li.evaluation-time {
+    padding: 10px;
+    color: #999;
+    background-color: #f5f5f5;
+}
+
+.evaluation-form li > div {
+    margin-bottom: 10px;
+}
+
+.evaluation-pane .evaluation-form li > label {
+    width: 100%;
+}
+
+.gray-bg {
+    background-color: #f5f5f5;
+}
+
+.item-input input {
+    font-size: 1rem !important;
+}
+
+.item-input input:read-only {
+    background-color: transparent !important;
+}
+
+.item-input .input-label {
+    color: #999;
+}
+
+.calendar-entry {
+    display: inline;
+}
+
+.calendar-entry > div, .calendar-entry a {
+    float: left;
+    margin: 5px 0 0 5px;
+    width: calc(33.333% - 7px);
+    height: 120px;
+    background-color: #fff;
+    font-size: 20px;
+    position: relative;
+    display: block;
+}
+
+.calendar-entry > div.month {
+    color: #fc7560;
+    position: relative;
+}
+
+.calendar-entry > div.month > span {
+    color: #AAA;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.calendar-entry > div.month > div {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.calendar-entry > div.month > div > em {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.calendar-entry > a.date {
+    color: #999999;
+    transition: all .3s;
+    max-width: 180px;
+    opacity: 1;
+}
+
+.calendar-entry > a.date > div {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.calendar-entry > a.date > div > em {
+    font-size: 36px;
+    font-style: normal;
+}
+
+.calendar-entry > a.date.ng-enter, .calendar-entry > a.date.ng-hide {
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.calendar-entry > a.date.ng-enter.ng-enter-active {
+    max-width: 180px;
+    opacity: 1;
+}
+
+/** 数据列表显示样式 **/
+
+
+.trainee-data {
+    position: relative;
+    margin: 0 10px;
+}
+
+.trainee-data:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    width: 4px;
+    height: calc(100% - 80px);
+    background-color: #CCC;
+}
+
+
+.trainee-data h2 {
+    font-family: "Arial Narrow";
+    color: #fc7560;
+    position: relative;
+    font-weight: normal;
+    font-size: 30px;
+    padding-left: 1em;
+    margin: 20px 0;
+}
+
+.trainee-data h2:before {
+    content: '';
+    background-color: #fc7560;
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 40%;
+    z-index: 1;
+}
+
+.trainee-data > div {
+    margin-left: 40px;
+    border-radius: 6px;
+    background-color: #e3e8ee;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.trainee-data > div .new-data-button {
+    width: 100%;
+    height: 100%;
+    background-color: #69bceb;
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.trainee-data .training-data {
+    padding: 8px;
+}
+.trainee-data .training-data > h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.trainee-data .training-data-button {
+    width: 40px;
+    background-color: #69bceb;
+    color: #fff;
+    border: none;
+}
+
+.trainee-data > div .new-data-button:active {
+    background-color: #c7d3e2;
+}
+
+.trainee-data .training-data-row {
+    padding: 0;
+    max-height: 40px;
+    transition: max-height .5s;
+    width: auto;
+}
+
+.trainee-data .training-data-row.more {
+    max-height: 500px;
+}
+
+.trainee-data .training-data-row ul {
+    font-size: 1rem;
+    padding-left: 1em;
+    line-height: 170%;
+}
+
+.trainee-data > div.training-data-dump {
+    background-color: transparent;
+}
+
+.data-tab-header {
+    padding: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-tab-header > div {
+    width: 200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.data-tab-header > div > a {
+    line-height: 44px;
+    display: block;
+    width: 50%;
+    text-align: center;   
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+.data-tab-header > div > a.active {
+    border-bottom-color: #fc7560;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.menu-page .list .item-icon-left i {
+    font-size: 24px;
+}
+
+.evaluation-form {
+    background-color: #fff;
+}
+
+.evaluation-radar {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.evaluation-radar > div {
+    height: 300px;
+}

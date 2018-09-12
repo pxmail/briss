@@ -1,0 +1,71 @@
+<ion-view class="subpage trainee-profile-pge">
+    <div class="bar bar-header">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()" data-ng-if="showSimple !== true"></button>
+        <h1 class="title">运动员资料</h1>
+    </div>
+    <ion-content class="has-header gray-bg" padding="true">
+        <div class="center-text" data-ng-if="showSimple !== true">
+            <img data-ng-src="{{form.avatar|| defaultAvatar}}" class="profile-avatar">
+        </div>
+        <div class="list">
+            <label class="item">
+                姓名
+                <span class="item-note">{{form.name}}</span>
+            </label>
+            <label class="item">
+                手机号
+                <span class="item-note">{{form.mobile}}</span>
+            </label>
+
+            <div class="item item-divider"></div>
+
+            <label class="item">
+                性别
+                <span class="item-note">{{form.gender| gender}}</span>
+            </label>
+            <label class="item">
+                出生日期
+                <span class="item-note">{{form.dob}}</span>
+            </label>
+            <label class="item">
+                身高
+                <span class="item-note">{{form.height}} cm</span>
+            </label>
+            <label class="item">
+                体重
+                <span class="item-note">{{form.weight}} kg</span>
+            </label>
+            <label class="item">
+                籍贯
+                <span class="item-note">{{form.native}}</span>
+            </label>
+            <label class="item">
+                民族
+                <span class="item-note">{{form.nationality}}</span>
+            </label>
+
+            <div class="item item-divider"></div>
+
+            <label class="item">
+                训练基地
+                <span class="item-note">{{form.base_name}}</span>
+            </label>
+            <label class="item">
+                运动项目
+                <span class="item-note">{{form.sport}}</span>
+            </label>
+            <label class="item">
+                运动队
+                <span class="item-note">{{form.team}}</span>
+            </label>
+            <label class="item">
+                运动等级
+                <span class="item-note">{{form.grade}}</span>
+            </label>
+            <label class="item">
+                进入专业队时间
+                <span class="item-note">{{form.dot}}</span>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,82 @@
+2018/09/11 08:48:01.580			<object>
+stdClass Object
+(
+    [number] => 2
+    [file] => /var/sites/briss/web/action/coach/gen_touch_code.php
+    [line] => 23
+    [str] => fopen(../code.txt): failed to open stream: Permission denied
+    [get] => Array
+        (
+            [module] => coach
+            [method] => gen_touch_code
+        )
+
+    [post] => Array
+        (
+        )
+
+)
+
+2018/09/12 10:06:58.748			<object>
+stdClass Object
+(
+    [number] => 2
+    [file] => /var/sites/briss/web/action/coach/login.php
+    [line] => 27
+    [str] => error_log() expects parameter 1 to be string, object given
+    [get] => Array
+        (
+            [module] => coach
+            [method] => login
+        )
+
+    [post] => Array
+        (
+            [name] => 闫琪
+            [password] => ezsport
+        )
+
+)
+
+2018/09/12 10:40:51.588			<object>
+stdClass Object
+(
+    [number] => 2
+    [file] => /var/sites/briss/web/action/coach/login.php
+    [line] => 27
+    [str] => error_log() expects parameter 1 to be string, object given
+    [get] => Array
+        (
+            [module] => coach
+            [method] => login
+        )
+
+    [post] => Array
+        (
+            [name] => 闫琪
+            [password] => ezsport
+        )
+
+)
+
+2018/09/12 10:40:58.19			<object>
+stdClass Object
+(
+    [number] => 2
+    [file] => /var/sites/briss/web/action/coach/login.php
+    [line] => 27
+    [str] => error_log() expects parameter 1 to be string, object given
+    [get] => Array
+        (
+            [module] => coach
+            [method] => login
+        )
+
+    [post] => Array
+        (
+            [name] => 闫琪
+            [password] => ezsport
+        )
+
+)
+

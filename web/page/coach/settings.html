@@ -1,0 +1,59 @@
+<ion-view class="settings-page">
+    <aside>
+        <div class="left-top-buttons">
+            <button class="ion-ios-home" data-on-tap="goHome()"></button>
+        </div>
+        <div class="list">
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'trainees' }" 
+               data-ui-sref="settings.trainees">
+                运动员列表
+            </a>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'new_trainee' }" 
+               data-ui-sref="settings.new_trainee">
+                注册新运动员
+            </a>
+            <div class="item item-divider" data-ng-if="isSupperCoach"></div>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'coaches' || currentState === 'edit_coach'}" 
+               data-ui-sref="settings.coaches" 
+               data-ng-if="isSupperCoach">
+                教练员管理
+            </a>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'new_coach' }" 
+               data-ui-sref="settings.new_coach" 
+               data-ng-if="isSupperCoach">
+                注册新教练
+            </a>
+            <div class="item item-divider" data-ng-if="isSupperCoach"></div>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'base' || currentState === 'edit_base'}" 
+               data-ui-sref="settings.base" 
+               data-ng-if="isSupperCoach">
+                训练基地管理
+            </a>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'new_base' }" 
+               data-ui-sref="settings.new_base" 
+               data-ng-if="isSupperCoach">
+                添加训练基地
+            </a>
+            <div class="item item-divider"></div>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'touch_code' }" 
+               data-ui-sref="settings.touch_code">
+                获取触屏端验证码
+            </a>
+            <a class="item" 
+               data-ng-class="{'current' : currentState === 'password' }" 
+               data-ui-sref="settings.password">
+                修改密码
+            </a>
+            <div class="item item-divider"></div>
+            <a class="item" data-on-tap="logout()">退出系统</a>
+        </div>
+    </aside>
+    <ion-nav-view></ion-nav-view>
+</ion-view>

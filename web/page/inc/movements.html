@@ -1,0 +1,4 @@
+<div data-ng-repeat="(group, children) in movements" class="movement-list">
+    <h3>{{group}}</h3>
+    <button data-ng-repeat="movement in children" data-on-tap="showDataForm(movement.id, movement.name)">{{movement.name}}</button>
+</div>

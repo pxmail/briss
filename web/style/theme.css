@@ -1,0 +1,593 @@
+@charset "UTF-8";
+/*
+    (C) 2016 EZ Sport Ltd
+*/
+/* 
+    Created on : 2016-7-8, 10:58:36
+    Author     : xieyiming
+*/
+
+body, input, button, a, h1, h2, h3, h4, h5 {
+    color: #555;
+    font-family: Hiragino Sans GB,Helvetica,Tahoma,Arial,STXihei,\\534E\6587\7EC6\9ED1,"Microsoft YaHei","微软雅黑",\\5FAE\8F6F\96C5\9ED1,SimSun,\\5B8B\4F53,Heiti,\\9ED1\4F53,sans-serif!important;
+}
+
+#msg {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fc7560;
+    transition: all .3s;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 100;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+}
+
+#msg.show {
+    max-height: 70px;
+    padding: 6px 0;
+}
+
+.clear {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+main {
+    background-color: #EEEEEE;
+    height: calc(100% - 100px);
+    padding: 15px;
+    overflow: auto;
+}
+
+
+#home .search-bar {
+    margin: 0px 20px 10px 20px;
+    background-color: #d1d1d1;
+    border-radius: 8px;
+    line-height: 40px;
+    color: white;
+    padding-left: 60px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /*cursor: pointer;*/
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 24px 24px;
+    display: block;
+    text-decoration: none;
+}
+
+/*
+.row {
+    display: flex;
+}
+
+
+.row .col.col-33 {
+    width: 33.3333%;
+}
+
+.row .col.col-50 {
+    width: 50%;
+}
+
+.row .flex {
+    flex: auto;
+}*/
+
+.flex {
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/** 对话框背景 **/
+.dialog-mask {
+    position: fixed;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+}
+
+
+dialog header {
+    background: none;
+    height: auto;
+    color: #444444;
+    font-size: 1rem;
+    line-height: 40px;
+    background-color: #EEEEEE;
+    border-bottom: 1px solid #999999;
+    box-shadow: none;
+}
+
+dialog header > button {
+    float: right;
+    height: 40px;
+    display: block;
+    background: transparent;
+    border: none;
+    width: 60px;
+    color: #1f9efb;
+}
+
+dialog header > button:active {
+    background-color: #1f9efb;
+    color: #ffffff;
+}
+
+dialog .dialog-body {
+    margin: 20px;
+}
+
+dialog footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.evaluation-form {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.evaluation-form li {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    margin: 10px;
+}
+
+.evaluation-form li > label {
+    display: block;
+    min-width: 120px;
+    line-height: 50px;
+    color: #666;
+}
+
+.evaluation-form li > div {
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    padding: 0 8px;
+    line-height: 32px;
+    margin-top: 10px;
+}
+
+.evaluation-form li > div > textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #e3e8ee;
+    padding: 8px;
+}
+
+.evaluation-form li > div > textarea:read-only {
+    background-color: #f8f8f8;
+}
+
+.evaluation-form li  div.inline-button {
+    width: 100px;
+    flex: none;
+    -webkit-flex: none;
+    -moz-flex: none;
+}
+
+.evaluation-form li  div.inline-button > i {
+    border: none;
+    color: #e3e8ee;
+    background-color: transparent;
+    font-size: 30px !important;
+}
+
+
+.evaluation-form input {
+    background-color: #e3e8ee;
+    /*border-radius: 4px;*/
+    width: 100%;
+    padding: 0 10px;
+}
+
+/** 星星选择控件样式 **/
+.ez-star-container {
+    position: relative;
+    height: 32px;
+    background-color: #ff3e20;
+    background-image: linear-gradient(right, #ff3e20, #ff9b8c);
+    background-image: -webkit-linear-gradient(right, #ff3e20, #ff9b8c);
+}
+
+.ez-star-container.readonly {
+    background-color: #1E88E5;
+    background-image: linear-gradient(right,  #1E88E5, #90CAF9);
+    background-image: -webkit-linear-gradient(right,  #1E88E5, #90CAF9);
+}
+
+.ez-star-container .ez-star-mask {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e3e8ee;
+    transition: width .3s;
+}
+
+.ez-star-container .ez-star-component {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+.ez-star-container .ez-star-component .ez-star-padding {
+    background-color: #ffffff;
+    width: calc(14.285% - 28px);
+}
+
+.ez-star-container .ez-star-component .ez-star-padding:last-child {
+    width: auto;
+    flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+}
+
+.ez-star-container .ez-star-component.show-title .ez-star {
+    position: relative;
+    font-size: 14px;
+}
+
+
+.ez-star-container .ez-star-component.show-title > div:before {
+    color: #AAA;
+    width: 100%;
+    text-align: center;
+}
+
+.ez-star-container .ez-star-component.show-title > div:first-child:before {
+    content: '很差';
+    position: absolute;
+    top: -28px;
+}
+
+.ez-star-container .ez-star-component.show-title > div:nth-child(7):before {
+    content: '一般';
+    position: absolute;
+    top: -28px;
+}
+
+.ez-star-container .ez-star-component.show-title > div:nth-child(13):before {
+    content: '很好';
+    position: absolute;
+    top: -28px;
+}
+/*
+.pain-values > div {
+    height: 32px;
+    text-align: center;
+    background-color: #dddddd;
+    border: 1px dotted #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 32px;
+    width: 32px;
+    color: #555;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.pain-values > div.selected {
+    background-color: #69bceb;
+    color: #fff;
+}*/
+/*
+#evaluation-dialog {
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .5s;
+}*/
+
+.dialog-mask.show {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.pain-capsule {
+    background-color: #2196F3;
+    color: #fff;
+    text-align: center;
+    padding: 4px 6px;
+    margin-right: 1em;
+}
+
+.gray-bg {
+    background-color: #eee;
+}
+
+.gray-bg.with-logo {
+    background-image: url(../image/ezsport-gray.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50%;
+    background-size: 185px 40px;
+}
+
+
+.popup .popup-body .check-error {
+    background-color: #ff7373;
+    text-align: center;
+    overflow: hidden;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.popup .popup-body .check-error.show {
+    height: 50px;
+}
+
+.trainee-page ion-nav-view > .pane {
+    background-color: #EEEEEE;
+    padding: 10px;
+}
+
+.white-bg, .trainee-page ion-nav-view > .pane.white-bg {
+    background-color: #fff !important;
+}
+
+.right-text {
+    text-align: right !important;
+}
+
+.report-page .ez-tabs {
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.report-page .ez-tabs > button {
+    width: 16.666%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #eee;
+
+}
+
+.report-page .ez-tabs > button.current {
+    background-color: #ff9b8c;
+    color: #fff;
+}
+
+.report-page .ez-tabs > button:not(:first-child) {
+    margin-left: -1px;
+}
+
+.report-page .ez-tabs > button:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+
+.report-page .ez-tabs > button:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.report-page .report-table {
+    margin-bottom: 20px;
+}
+
+.report-page .report-table table {
+    min-width: 100%;
+    border: none;
+    background-color: #fff;
+}
+
+.report-page .report-table th {
+    background-color: #69bceb;
+    color: #fff;
+    line-height: 180%;
+    text-align: left;
+    padding: 0 6px;
+}
+
+/*.report-page .report-table tr > th,*/ 
+.report-page .report-table tr > td {
+    padding: 0 6px;
+    line-height: 40px;
+}
+
+.report-page .report-table tr:nth-child(odd) {
+    background-color: #f3fbff;
+}
+
+.report-page .report-table tr > th:first-child, 
+.report-page .report-table tr > td:first-child {
+    width: 180px;
+}
+
+
+.prompt {
+    font-size: 30px;
+    color: #ccc;
+    line-height: 200%;
+}
+
+#report-chart-canvas {
+    width: 100%;
+    min-height: 300px;
+}
+
+.report-chart {
+    background-color: #fff;
+}
+
+.report-chart .chart-container {
+    height: 480px;
+}
+
+.item-icon-right .icon {
+    color: #AAA;
+}
+
+.note {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+progress {
+    width: 100%;
+    height: 4px;
+    border: none;
+    background-color:#eeeeee;
+    margin: 0;
+}
+
+progress::-moz-progress-bar { background: #3399ff; }
+progress::-webkit-progress-bar { background: #eeeeee; }
+progress::-webkit-progress-value  { background: #3399ff; }
+
+.ez-number {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    background-color: #e3e8ee;
+}
+
+.ez-number > li {
+    display: block;
+    flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    border: 1px solid #DDD;
+    margin: 0 0 0 -1px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+}
+
+.ez-number > li.selected {
+    background-color: #fc7560;
+    color: #fff;
+    padding: 0 5px;
+    border-color: #fc7560;
+}
+
+.ez-number.readonly > li.selected {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+
+.ez-number > li:after {
+    color: #999;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 30px);
+    font-size: 12px;
+    color: #999;
+    width: 60px;
+    text-align: center;
+    line-height: 100%;
+}
+
+.ez-number > li.selected:after {
+    position: initial;
+    width: auto;
+    color: currentColor;
+    padding-left: 5px;
+}
+
+.pain-values .ez-number > li:nth-child(1):after {
+    content: '轻度疼痛';
+}
+
+.pain-values .ez-number > li:nth-child(4):after {
+    content: '中度疼痛';
+}
+
+.pain-values .ez-number > li:nth-child(7):after {
+    content: '重度疼痛';
+}
+
+.pain-values .ez-number > li:nth-child(10):after {
+    content: '剧烈疼痛';
+}
+/***** RPE *****/
+.rpe-numbers .ez-number > li:nth-child(1):after {
+    content: '毫无感觉';
+}
+
+.rpe-numbers .ez-number > li:nth-child(2).selected:after {
+    content: '极其轻松';
+}
+
+.rpe-numbers .ez-number > li:nth-child(4):after {
+    content: '非常轻松';
+}
+
+.rpe-numbers .ez-number > li:nth-child(6).selected:after {
+    content: '轻松';
+}
+
+.rpe-numbers .ez-number > li:nth-child(8):after {
+    content: '有点困难';
+}
+
+.rpe-numbers .ez-number > li:nth-child(10).selected:after {
+    content: '困难';
+}
+
+.rpe-numbers .ez-number > li:nth-child(12):after {
+    content: '非常困难';
+}
+
+.rpe-numbers .ez-number > li:nth-child(14).selected:after {
+    content: '极其困难';
+}
+
+.rpe-numbers .ez-number > li:nth-child(15):after {
+    content: '筋疲力尽';
+}
+
+.info-popup > .popup > .popup-head {
+    display: none;
+}
+
+.info-popup > .popup .popup-msg {
+    padding: 10px 30px;
+    text-align: center;
+}

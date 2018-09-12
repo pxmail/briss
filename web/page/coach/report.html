@@ -1,0 +1,77 @@
+<ion-view class="report-page gray-bg subpage">
+    <div class="bar bar-header bar-light">
+        <button class="button button-icon icon ion-ios-arrow-back" data-ng-click="goBack()"></button>
+        <h1 class="title">{{title}}</h1>
+    </div>
+    <ion-content class="has-header" padding="true">
+        <div class="ez-tabs row">
+            <button data-ng-class="{current: currentIndex === 0}" data-ng-click="setReportTab(0)">最近7天</button>
+            <button data-ng-class="{current: currentIndex === 1}" data-ng-click="setReportTab(1)">最近30天</button>
+            <button data-ng-class="{current: currentIndex === 2}" data-ng-click="setReportTab(2)">最近90天</button>
+            <button data-ng-class="{current: currentIndex === 3}" data-ng-click="setReportTab(3)">最近120天</button>
+            <button data-ng-class="{current: currentIndex === 4}" data-ng-click="setReportTab(4)">最近365天</button>
+            <button data-ng-class="{current: currentIndex === 5}" data-ng-click="setReportTab(5)">全部数据</button>
+        </div>
+
+        <div class="prompt" data-ng-if="!data">正在加载…… </div>
+        <div class="prompt" data-ng-if="data && data.length === 0">无训练数据</div>
+        <div class="report-table">
+
+            <table data-ng-if="mode === 'actions'" data-ng-if="data && data.length > 0">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th data-ng-repeat="field in movement.format">{{field.title}}<span data-ng-if="field.unit">({{field.unit}})</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="row in data">
+                        <td>{{row.training_date}}</td>
+                        <td data-ng-repeat="(field, config) in movement.format">{{row[field]| dataFilter : config.filter}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table data-ng-if="mode === 'evaluations'">
+                <thead>
+                    <tr>
+                        <th>训练日期</th>
+                        <th>自我状态评价</th>
+                        <th>训练欲望</th>
+                        <th>睡眠质量</th>
+                        <th>食欲</th>
+                        <th>Omegawave测试</th>
+                        <th>晨脉</th>
+                        <th>训练后RPE</th>
+                        <th>训练后HRV</th>
+                        <th>冷疗后HRV</th>
+                        <th>训练态度</th>
+                        <th>完成质量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="row in data">
+                        <td>{{row.create_date}}</td>
+                        <td>{{row.self_rating}}</td>
+                        <td>{{row.desire}}</td>
+                        <td>{{row.sleep}}</td>
+                        <td>{{row.appetite}}</td>
+                        <td>{{row.omega_wave}}</td>
+                        <td>{{row.morning_pulse}}</td>
+                        <td>{{row.rpe_after}}</td>
+                        <td>{{row.hrv_after}}</td>
+                        <td>{{row.hrv_cold}}</td>
+                        <td>{{row.attitude}}</td>
+                        <td>{{row.quality}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="report-chart">
+            <div class="chart-container padding">
+                <canvas id="report-chart-canvas"></canvas>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
