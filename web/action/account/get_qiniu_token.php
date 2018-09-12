@@ -38,6 +38,6 @@ class get_qiniu_token extends Action {
 		];
 	}
 	public function getPrivilege() {
-		return 10;
+		return 40;
 	}
 }
