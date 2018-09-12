@@ -14,6 +14,7 @@ class list_trainee extends Action {
 	public function exec(array $params = null) {
 		$trainee = new trainee();
 		$amount = $trainee->listCount(trainee::STATUS_NORMAL);
+		namespace\Log::debug($amount);
 		return ['amount' => $amount];
 	}
 	
