@@ -65,6 +65,6 @@ class create extends Action {
 	}
 
 	public function getPrivilege() {
-		return 0;
+		return NULL;
 	}
 }
