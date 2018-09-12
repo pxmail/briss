@@ -23,7 +23,7 @@ class is_alive extends Action {
     }
 
     public function getPrivilege() {
-        return 40;
+        return NULL;
     }
 
 }

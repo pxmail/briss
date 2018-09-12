@@ -34,6 +34,6 @@ class list_all extends Action {
 	}
 	
 	public function getPrivilege() {
-		return 20;
+		return NULL;
 	}
 }

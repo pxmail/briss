@@ -19,6 +19,6 @@ class list_trainee extends Action {
 	}
 	
 	public function getPrivilege() {
-		return 0;
+		return NULL;
 	}
 }

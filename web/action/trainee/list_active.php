@@ -33,6 +33,6 @@ class list_active extends Action {
 	}
 
 	public function getPrivilege() {
-		return 0;
+		return NULL;
 	}
 }
