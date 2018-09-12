@@ -5,7 +5,7 @@ require_once 'fly/privilege.php';
 use fly\Action;
 use fly\Privilege;
 use fly\JWT;
-
+use fly\Log;
 /**
  * 教练员登录
  * @author yangz
@@ -48,7 +48,7 @@ class login extends Action {
 		 $obj->privileges = explode(',', $role->privilege);
 		 
 		 $access_token = JWT::encode($obj);
-         namespace\Log::debug($access_token);
+         debug($access_token);
 		 $expire_in = JWT::EXPIRE;
 		 return ['access_token' => $access_token, 'expire_in' => $expire_in];
 	}
